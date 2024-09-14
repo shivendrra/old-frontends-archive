@@ -1,0 +1,404 @@
+body {
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Shippori Antique', sans-serif;   
+}
+
+/* for navbar */
+nav {
+    box-shadow: 0 5px 10px rgb(177, 176, 176);
+}
+
+#mainNavbar #nav {
+	color: #131212;
+    font-weight: 300;
+}
+
+#mainNavbar .navbar-brand {
+	color: #131212;
+	font-size: 40px;
+    font-family: 'Festive', cursive;
+}
+
+/* for main landing menu */
+header {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+#main {
+	padding-top: 6%;
+	text-align: left;
+}
+
+#he1, #he2 {
+	color: white;
+	text-align: left;
+	
+}
+
+/* for topnav */
+.topnav {
+    position: relative;
+    top: 0px;
+    padding: 20px;
+    background-color: #585858;
+    box-shadow: 0 5px 10px rgb(138, 137, 137);
+}
+
+.bs-bar-item {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.topnav-item :hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(107, 105, 105);
+    border: 1px solid rgb(107, 105, 105);
+}
+
+i {
+    font-size: 20px;
+}
+
+/* for search bar */
+.form-control {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #444444;
+    height: 38px;
+    padding: 6px 16px;
+}
+
+.form-search .form-control-search {
+    background-color: rgba(115,186,221,0.35);
+    box-shadow: none;
+    border: medium none;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    height: 50px;
+    line-height: 1.42857;
+    padding: 6px 20px;
+    transition: background-color .2s;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input {
+    line-height: normal;
+}
+
+/* headings and paragraphs */
+#head {
+	padding: 1cm;
+}
+
+#heading1 {
+    font-family: 'Festive', cursive;
+    font-size: 80px;
+}
+
+#heading2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* for info card 1 */
+.info-card {
+    background-color: #f8f8f8;
+    display: block;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+}
+
+img {
+    border-radius: 20px;
+}
+
+.btn-outline-primary {
+    color: white;
+    background-color: #02acad;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #02acad;
+}
+
+.cr-img {
+    height: 250px;
+}
+
+/* for buttons and links */
+li .btn-outline {
+    outline: none;
+    display: block;
+    cursor: pointer;
+    border: solid 2px #02c3bd;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.3s linear;
+    background-color: #02c3bd;
+    box-shadow: 0 5px 10px #555555;
+}
+
+li .btn-outline :hover, .btn-outline :focus {
+    background-color: #04c0ba;
+    color: white;
+}
+
+li .btn-outline :active {
+    background-color: #02acad;
+    color: #fff;
+}
+
+#key-link {
+    text-decoration: none;
+    color: #838282;
+}
+
+#key-link:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #555555;
+    color: #555555;
+}
+
+/* for shop display */
+.dis-main {
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 10%);
+}
+
+.dis-main :hover {
+    background-color: #02acad;
+    border-radius: 10px;
+    color: white;
+}
+
+.dis-main-para {
+    color: rgb(170, 165, 165);
+    font-weight: bold;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+.dis-main-head {
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 50px;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+.dis-img {
+    height: 100px;
+    width: 100px;
+    padding: none;
+    border-radius: 10px;
+}
+
+.dis-head {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dis-para {
+    font-size: 12px;
+}
+
+.container {
+    max-width: 90%;
+}
+
+/* for trade features */
+.trd-main-bg {
+    padding: 20px 0 20px 0;
+}
+
+.trd-main {
+    border: none;
+}
+
+.trd-head {
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+.trd-para {
+    color: rgb(151, 150, 150);
+    font-weight: bold;
+}
+
+.img-thumbnail {
+    border: none;
+    height: 200px;
+    width: 200px;
+}
+
+/* for secondary features */
+.features-inner {
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    padding: 30px 0;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+.info-heading {
+    padding-bottom: 5px;
+}
+
+.info-logo {
+    font-size: 30px;
+    color: #292828;
+}
+
+.info-head {
+    font-size: small;
+    font-weight: bold;
+}
+
+.info-para {
+    font-size: small;
+    color: #838282;
+}
+
+/* for connect buyers */
+.quote-entry {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+}
+
+#connect-buyers ul li {
+    width: 32%;
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+#connect-buyers ul {
+    list-style: none;
+    margin: none;
+    float: initial;
+    padding-top: 20px;
+}
+
+/* for footer */
+footer {
+    background: #f6f6f6;
+    border-top: solid 1px #e6e6e6;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: arial
+}
+
+.foot-head {
+    background: #eeeeee;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #e6e6e6;
+    line-height: 42px;
+    font-weight: 400;
+}
+
+.foot-word {
+    width: 1001px;
+    margin: 0 auto;
+}
+
+.foot-social {
+    float: right;
+}
+
+.foot-lower li {
+    list-style: none;
+}
+
+ul.footwdth {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.foot-lower li.foot-wdth {
+    margin: 7px 0;
+    width: 190px;
+    float: left;
+    list-style: none;
+    line-height: 19px;
+}
+
+/* miscellanious */
+.keyword {
+    color: #555555;
+    font-size: large;
+}
+
+hr {
+    width: 300px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#toggler {
+    color: black;
+}
+
+#toggler:active {
+    border: none;
+    color: black;
+}

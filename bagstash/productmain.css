@@ -1,0 +1,113 @@
+body {
+    background-color: #eeecec;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* for navbar */
+#mainNavbar {
+    box-shadow: 0 0 10px rgb(75, 77, 75);
+}
+
+#mainNavbar #nav {
+	color: #131212;
+    font-weight: 300;
+}
+
+#mainNavbar .navbar-brand {
+	color: #131212;
+	font-size: 40px;
+    font-family: 'Festive', cursive;
+}
+
+/* for main display */
+section {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.img-thumbnail {
+    border: none;
+}
+
+/* for dealer card */
+.deal-add {
+    font-size: 15px;
+    color: #02acad;
+    font-weight: bold;
+}
+
+.c-no {
+    background-color: #44f0bc;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+/* for extra details */
+.con-card {
+    padding: none;
+}
+
+.con-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.con-title :hover {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+/* for buttons and links */
+li .btn-outline {
+    outline: none;
+    display: block;
+    cursor: pointer;
+    border: solid 2px #02c3bd;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.3s linear;
+    background-color: #02c3bd;
+    box-shadow: 0 5px 10px #555555;
+}
+
+li .btn-outline :hover, .btn-outline :focus {
+    background-color: #04c0ba;
+    color: white;
+}
+
+li .btn-outline :active {
+    background-color: #02acad;
+    color: #fff;
+}
+
+#key-link {
+    text-decoration: none;
+    color: #838282;
+}
+
+#key-link:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #555555;
+    color: #555555;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

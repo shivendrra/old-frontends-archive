@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Synapse: Login or Signup</title>
+<!-- all meta tags here -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="login.css">
+
+<!-- javascript -->
+<script src="login.js"></script>
+
+<!-- font awesome library -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+</head>
+<body>
+<br>
+    <section class="container-fluid px-0">
+        <div class="row align-items-center">
+            <div id="d1" class="col-lg-4 "></div>
+            <div id="d2" class="col-lg-4">
+                <h2 class="text-center">Synapse</h2>
+                <div id="form">
+                    <form>
+                        <div class="form-group">
+                            <label for="fname">First Name: </label>
+                            <input type="text" class="form-control" id="fname" name="FirstName" required>
+                            <br>
+                            <label for="lname">Last Name: </label>
+                            <input type="text" class="form-control" id="lname" name="LastName" required>
+                            <br>
+                            <label for="mobno">Mobile No.: </label>
+                            <input type="number" class="form-control" id="mobno" name="Mobileno" required>
+                            <br>
+                            <label for="email">Email address: </label>
+                            <input type="email" class="form-control" id="email" name="Email" aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <br>
+                            <label for="password">Password: </label>
+                            <input type="password" class="form-control" id="password" aria-describedby="passHelp" required>
+                            <small id="passHelp" class="form-text text-muted">Create a strong password to keep your account safe.</small>
+                        </div>
+                        <div class="form-group ">
+                            <label for="male">Male: </label>
+                            <input type="radio" name="Gender" id="male" value="Male">
+                            <label for="female">Female: </label>
+                            <input type="radio" name="Gender" id="female" value="Female">
+                            <label for="other">Other: </label>
+                            <input type="radio" name="Gender" id="other" value="Other">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div id="d3" class="col-lg-4 "></div>
+        </div>
+    </section>
+
+
+    <!-- javascript with jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

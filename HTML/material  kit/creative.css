@@ -1,0 +1,33 @@
+header {
+    background-image: url(bg4.jpg);
+    background-size: 1980px 1080px;
+    background-position: fit;
+    padding-bottom: 5cm;
+}
+
+hr {
+    width: 500px;
+    float: left;
+}
+
+#heading {
+    padding-top: 10%;
+    text-align: left;
+    color: rgba(66, 70, 70, 0.911);
+    padding-left: 8%;
+}
+
+#mainNavbar .navbar-brand{
+    font-size: 1cm;
+    color: rgba(240, 84, 45, 0.911);
+}
+
+#mainNavbar .nav-link {
+    color: rgba(240, 84, 45, 0.911);
+    font-size: 20px;
+}
+
+#mainNavbar .nav-link :hover {
+    color: yellow;
+    size: 20px;
+}

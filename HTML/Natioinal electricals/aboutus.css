@@ -1,0 +1,53 @@
+body {
+	font-family: 'Courier New', Courier, monospace;
+}
+
+#mainNavbar {
+	color: rgb(89, 92, 97) !important;
+}
+
+#mainNavbar .nav-link {
+	color: white;
+}
+
+#mainNavbar .navbar-brand {
+	color: white;
+	font-weight: 200;
+	font-size: 1.5rem;
+}
+
+h1 {
+	size: 2cm;
+}
+
+hr {
+	width: 400px;
+}
+
+#di {
+	padding: 1cm;
+	border-top: 10px solid lightgrey;
+	border-bottom: 10px solid lightgrey;
+	border-radius: 10px;
+	margin: 0.5cm;
+}
+
+footer {
+	background-color: rgb(120, 123, 128);
+	padding-top: 1cm;
+	padding-bottom: 0.5cm;
+	float: center;
+}
+
+#harsh {
+	text-decoration: none;
+	color: white;
+}
+
+#he2 {
+	color: white;
+}
+
+#p1 {
+	color: white;
+}

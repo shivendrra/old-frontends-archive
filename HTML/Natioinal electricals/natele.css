@@ -1,0 +1,122 @@
+body {
+	background-color: rgb(199, 225, 247);
+	font-family: 'Courier New', Courier, monospace;
+}
+
+#main {
+	padding-top: 10%;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+}
+
+#mainNavbar {
+	color: rgb(120, 123, 128);
+}
+
+#mainNavbar .nav-link {
+	color: white;
+}
+
+#mainNavbar .navbar-brand {
+	color: white;
+	font-weight: 200;
+	font-size: 1.5rem;
+}
+
+input {
+	border-bottom: 2px solid black;
+}
+
+#toogler {
+	color: whitesmoke;
+}
+
+header {
+	background-image: url(bg1.jpg);
+	background-size: 1980px 1080px;
+	background-position: center;
+	padding-bottom: 1cm;
+	padding-top: 2cm;
+}
+
+#head {
+	border: 2px solid rgb(214, 100, 100);
+	border-radius: 20px;
+	padding: 1cm;
+}
+
+#he1 {
+	color: rgb(214, 100, 100);
+	text-align: center;
+	padding: 1cm;
+	border: 1px solid rgba(175, 169, 169, 0.89);
+	border-radius: 20px;
+	background-color: rgba(169, 172, 175, 0.89);
+}
+
+img {
+	width: 30%;
+	float: center;
+}
+
+#ser {
+	color: crimson;
+	font-size: 1cm;
+}
+
+hr {
+	width: 400px;
+	color: pink;
+}
+
+#p1 {
+	color: white;
+}
+
+#a1 {
+	text-decoration: white;
+	color: white;
+}
+
+#a1 :hover {
+	text-decoration: underline;
+	color: rgb(92, 92, 184);
+}
+
+footer {
+	background-color: rgb(120, 123, 128);
+	padding-top: 1cm;
+	padding-bottom: 0.5cm;
+	float: center;
+}
+
+#he2 {
+	color: white;
+}
+
+#he3 {
+	color: crimson;
+	size: 1cm;
+}
+
+#btna {
+	text-decoration: none;
+	color: white;
+}
+
+#harsh {
+	text-decoration: none;
+	color: white;
+}
+
+#p2 {
+	color: white;
+}
+
+section {
+	border: 2px solid rgb(214, 100, 100);
+	border-radius: 10px;
+	padding: 1cm;
+	margin-right: 2cm;
+	margin-left: 2cm;
+}

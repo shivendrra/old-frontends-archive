@@ -1,0 +1,49 @@
+/* google fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Roboto:wght@100&family=ZCOOL+KuaiLe&display=swap');
+
+body {
+    color: black;
+    background-image: url(os3.jpg);
+    background-position: center;
+    background-size: 1980px 1080px;
+}
+
+#body {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+header {
+    background: url(os11.jpg);
+    background-position: auto;
+    background-size: 1980px 1080px;
+    padding-bottom: 2cm;
+}
+
+#he1{
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 2cm;
+    color: rgba(156, 154, 154, 0.342);
+}
+
+#mainNavbar .navbar-brand {
+	color: white;
+	font-size: 30px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+#mainNavbar .nav-link {
+	color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+#mainNavbar .nav-link:hover {
+    text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+custom-search-input (en:'Search');

@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://rubygarage.org/blog/how-to-build-a-b2b-website -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<link rel="preload" href="https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-500-5f48cbfcf7786f9e1cdc7af4832f343e.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-regular-4d16d091bb13e2c374d3071f29a44aef.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-700-f143787ae4d120d476ad9653f795c2b4.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="amphtml" href="https://rubygarage.org/blog/how-to-build-a-b2b-website.amp">
+<link href="https://rubygarage.org/blog/how-to-build-a-b2b-website" rel="canonical">
+<style>
+@font-face{font-family:Poppins;font-display:swap;font-style:normal;font-weight:200;src:local("Poppins ExtraLight"),local("Poppins-ExtraLight"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-200-645114f6f3e8a637a12f9998d73f6dfe.woff2) format("woff2"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-200-5da92935e5871a06b41fa02c5eff9bca.woff) format("woff")}@font-face{font-family:Poppins;font-display:swap;font-style:normal;font-weight:300;src:local("Poppins Light"),local("Poppins-Light"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-300-550e6f0edf61892f42ad2ce74cadbd59.woff2) format("woff2"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-300-42af6974ad177cab99fac06238b15edd.woff) format("woff")}@font-face{font-family:Poppins;font-display:swap;font-style:normal;font-weight:400;src:local("Poppins Regular"),local("Poppins-Regular"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-regular-4d16d091bb13e2c374d3071f29a44aef.woff2) format("woff2"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-regular-df9fdb2ac269114461d9e94d502b6c4d.woff) format("woff")}@font-face{font-family:Poppins;font-display:swap;font-style:normal;font-weight:500;src:local("Poppins Medium"),local("Poppins-Medium"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-500-5f48cbfcf7786f9e1cdc7af4832f343e.woff2) format("woff2"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-500-b2313d338efe185a227cf7cd00718c8b.woff) format("woff")}@font-face{font-family:Poppins;font-display:swap;font-style:normal;font-weight:600;src:local("Poppins SemiBold"),local("Poppins-SemiBold"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-600-29204587c4c3b8f27c48254972840650.woff2) format("woff2"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-600-4e9a36dac142be4bc88ffa5aed75a6fe.woff) format("woff")}@font-face{font-family:Poppins;font-display:swap;font-style:normal;font-weight:700;src:local("Poppins Bold"),local("Poppins-Bold"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-700-f143787ae4d120d476ad9653f795c2b4.woff2) format("woff2"),url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/fonts/poppins/poppins-v5-latin-700-b5fa690d5b36602741e435f15713d638.woff) format("woff")}*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-family:Poppins,Verdana,Roboto,sans-serif;font-size:1.0625rem;font-weight:400;line-height:1.5;color:#000;text-align:left;background-color:#fff}[tabindex="-1"]:focus:not(.focus-visible),[tabindex="-1"]:focus:not(:focus-visible){outline:0!important}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5px}p{margin-top:0;margin-bottom:1rem}abbr[data-original-title],abbr[title]{text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;border-bottom:0;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{font-style:normal;line-height:inherit}address,dl,ol,ul{margin-bottom:1rem}dl,ol,ul{margin-top:0}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a:hover{color:reset;text-decoration:none}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto;-ms-overflow-style:scrollbar}figure{margin:0 0 1rem}img{border-style:none}img,svg{vertical-align:middle}svg{overflow:hidden}table{border-collapse:collapse}caption{padding-top:.75rem;padding-bottom:.75rem;color:#6c757d;text-align:left;caption-side:bottom}th{text-align:inherit;text-align:-webkit-match-parent}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button:focus:not(.focus-visible),button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}textarea{overflow:auto;resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal}progress{vertical-align:baseline}[type=search]{outline-offset:-2px;-webkit-appearance:none}output{display:inline-block}summary{display:list-item;cursor:pointer}template{display:none}[hidden]{display:none!important}.container,.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media(min-width:500px){.container{max-width:480px}}@media(min-width:760px){.container{max-width:720px}}@media(min-width:992px){.container{max-width:960px}}@media(min-width:1280px){.container{max-width:1200px}}.row{display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.no-gutters{margin-right:0;margin-left:0}.no-gutters>.col,.no-gutters>[class*=col-]{padding-right:0;padding-left:0}.col,.col-3,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-md,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-xl-1,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12{position:relative;width:100%;padding-right:15px;padding-left:15px}.col{flex-basis:0;flex-grow:1;max-width:100%}.col-3{flex:0 0 25%;max-width:25%}.col-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-6{flex:0 0 50%;max-width:50%}.col-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-9{flex:0 0 75%;max-width:75%}.col-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-12{flex:0 0 100%;max-width:100%}.offset-1{margin-left:8.3333333333%}.offset-2{margin-left:16.6666666667%}@media(min-width:500px){.col-sm-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-sm-3{flex:0 0 25%;max-width:25%}.col-sm-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-sm-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-sm-6{flex:0 0 50%;max-width:50%}.col-sm-9{flex:0 0 75%;max-width:75%}.col-sm-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-sm-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-sm-12{flex:0 0 100%;max-width:100%}.offset-sm-0{margin-left:0}.offset-sm-1{margin-left:8.3333333333%}}@media(min-width:760px){.col-md{flex-basis:0;flex-grow:1;max-width:100%}.col-md-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-md-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-md-3{flex:0 0 25%;max-width:25%}.col-md-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-md-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-md-6{flex:0 0 50%;max-width:50%}.col-md-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-md-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-md-9{flex:0 0 75%;max-width:75%}.col-md-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-md-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-md-12{flex:0 0 100%;max-width:100%}.order-md-first{order:-1}.order-md-0{order:0}.order-md-1{order:1}.order-md-2{order:2}.order-md-3{order:3}.order-md-4{order:4}.order-md-5{order:5}.order-md-6{order:6}.order-md-7{order:7}.order-md-8{order:8}.offset-md-0{margin-left:0}.offset-md-1{margin-left:8.3333333333%}.offset-md-2{margin-left:16.6666666667%}.offset-md-3{margin-left:25%}.offset-md-4{margin-left:33.3333333333%}.offset-md-5{margin-left:41.6666666667%}.offset-md-6{margin-left:50%}}@media(min-width:992px){.col-lg-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-lg-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-lg-3{flex:0 0 25%;max-width:25%}.col-lg-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-lg-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-lg-6{flex:0 0 50%;max-width:50%}.col-lg-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-lg-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-lg-9{flex:0 0 75%;max-width:75%}.col-lg-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-lg-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-lg-12{flex:0 0 100%;max-width:100%}.order-lg-0{order:0}.offset-lg-0{margin-left:0}.offset-lg-1{margin-left:8.3333333333%}.offset-lg-2{margin-left:16.6666666667%}.offset-lg-3{margin-left:25%}.offset-lg-4{margin-left:33.3333333333%}.offset-lg-5{margin-left:41.6666666667%}.offset-lg-6{margin-left:50%}.offset-lg-7{margin-left:58.3333333333%}}@media(min-width:1280px){.col-xl-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-xl-3{flex:0 0 25%;max-width:25%}.col-xl-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-xl-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-xl-6{flex:0 0 50%;max-width:50%}.col-xl-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-xl-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-xl-9{flex:0 0 75%;max-width:75%}.col-xl-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-xl-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-xl-12{flex:0 0 100%;max-width:100%}.offset-xl-0{margin-left:0}.offset-xl-1{margin-left:8.3333333333%}.offset-xl-2{margin-left:16.6666666667%}.offset-xl-3{margin-left:25%}.offset-xl-5{margin-left:41.6666666667%}.offset-xl-6{margin-left:50%}.offset-xl-7{margin-left:58.3333333333%}}.container,.container-fluid{position:relative}@media(max-width:499.98px){.container,.container-fluid{width:auto}}.container,[class*=col-]{padding-right:10px;padding-left:10px}@media(min-width:500px){.container,[class*=col-]{padding-right:10px;padding-left:10px}}@media(min-width:760px){.container,[class*=col-]{padding-right:10px;padding-left:10px}}@media(min-width:1280px){.container,[class*=col-]{padding-right:15px;padding-left:15px}}.row{margin-right:-10px;margin-left:-10px}@media(min-width:500px){.row{margin-right:-10px;margin-left:-10px}}@media(min-width:760px){.row{margin-right:-10px;margin-left:-10px}}@media(min-width:1280px){.row{margin-right:-15px;margin-left:-15px}}body{position:relative;min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}ul{margin-bottom:0;padding-left:0;list-style:none}button{padding:0;border:none;background-color:transparent;font-family:inherit;cursor:pointer}button:focus{outline:none}b,strong{font-weight:700}img{max-width:100%;height:auto}.ol-reset{margin-top:0;margin-bottom:0;padding-left:0;list-style:none}picture{display:block}@-webkit-keyframes show-header-nav{0%{-webkit-transform:translateY(-80px);transform:translateY(-80px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes show-header-nav{0%{-webkit-transform:translateY(-80px);transform:translateY(-80px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}.main-nav__dropdown-item,.main-nav__item-title{-webkit-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease-in-out;transition-timing-function:ease-in-out}.main-nav__dropdown-item:hover{color:#e76d14}.main-header{display:flex;position:absolute;z-index:1001;top:0;left:0;flex-shrink:0;align-items:center;justify-content:space-between;width:100%;height:80px;padding-right:10px;padding-left:10px}.main-header--fixed{-webkit-box-shadow:0 6px 16px 0 rgba(0,0,0,.05);box-shadow:0 6px 16px 0 rgba(0,0,0,.05);position:fixed;-webkit-transform:translateY(0);transform:translateY(0);background-color:#fff}.main-header--fixed .main-header__get-button{border-color:#1c0058;background-color:#1c0058;color:#fff}.main-header--fixed .main-header__get-button:hover{border:2px solid #000;background-color:#000}.main-header--fixed .main-header__menu-btn{border-color:#f5f5f5}.main-header--fixed.main-header--blog-page{border-bottom:1px solid #ebebeb;-webkit-box-shadow:none;box-shadow:none}.main-header--slide-in{-webkit-animation:show-header-nav .15s;animation:show-header-nav .15s}.main-header--fixed-out{-webkit-transform:translateY(-100%);transform:translateY(-100%)}.main-header__left{flex-shrink:0}@media(min-width:992px){.main-header__left{padding-right:20px}}.main-header__center{display:none;width:100%}@media(min-width:992px){.main-header__center{display:block}}@media(min-width:760px){.main-header__right{min-width:185px}}.main-logo{display:flex;align-items:center}.main-logo__icon{width:26px;height:46px;background-image:url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/images/logo_icon-8689bbe0.svg)}.main-logo__text{display:none;width:116px;height:20px;margin-left:5px;background-image:url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/images/logo_text-05c20d94.svg)}.main-header__get-button{padding:10px 32px;border:2px solid #1c0058;color:#1c0058}.main-header__get-button:focus,.main-header__get-button:hover{background-color:#1c0058;color:#fff}@media(min-width:500px){.main-header{padding-right:20px;padding-left:20px}.main-header__get-button{margin-right:10px}.main-logo__text{display:inline-block}}.header-wrap-white .main-logo__text{background-image:url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/images/logo_text_white-86962ed2.svg)}.header-wrap-white .main-nav__item-title{color:#fff}.header-wrap-white .main-header__menu-btn{border-color:transparent}.header-wrap-white .main-header__get-button{-webkit-transition:background-color .15s,color .15s;transition:background-color .15s,color .15s;border-color:currentColor;color:#fff}.header-wrap-white .main-header__get-button:focus,.header-wrap-white .main-header__get-button:hover{border-color:#fff;background-color:#fff;color:#230070}.header-wrap-white .main-header--fixed .main-logo__text{background-image:url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/images/logo_text-05c20d94.svg)}.header-wrap-white .main-header--fixed .main-header__get-button{border-color:#1c0058;background-color:#1c0058;color:#fff}.header-wrap-white .main-header--fixed .main-header__get-button:hover{border:2px solid #000;background-color:#000}.header-wrap-white .main-header--fixed .main-header__menu-btn{border-color:#f5f5f5}.header-wrap-white.white-logo .main-logo__icon{background-image:url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/images/logo_icon_white-fb558748.svg)}.header-wrap-white.white-logo .main-header--fixed .main-logo__icon{background-image:url(https://d3smn0u2zr7yfv.cloudfront.net/packs/media/images/logo_icon-8689bbe0.svg)}.main-header__menu-btn{min-width:53px;padding:20px 15px;border:1px solid #e8e8e8;border-radius:50%;background:#fff;text-align:center}.main-header__menu-btn:hover .main-header__menu-btn-line:first-child{-webkit-transform:translateY(1px);transform:translateY(1px)}.main-header__menu-btn:hover .main-header__menu-btn-line:last-child{-webkit-transform:translateY(-1px);transform:translateY(-1px)}.main-header__menu-btn-line{display:block;width:100%;height:2px;margin-bottom:3px;-webkit-transition:-webkit-transform .2s ease-in-out;transition:-webkit-transform .2s ease-in-out;transition:transform .2s ease-in-out;transition:transform .2s ease-in-out,-webkit-transform .2s ease-in-out;background-color:#1c0058}.main-header__menu-btn-line:last-child{margin-bottom:0}.main-nav-open{overflow-y:hidden}@media(max-width:991.98px){.main-nav-open .page-container{display:none}}.main-nav-container{display:flex;position:fixed;z-index:1002;top:0;right:0;flex-direction:column;justify-content:space-between;width:100%;height:100%;padding-bottom:20px;-webkit-transform:translateY(-100%);transform:translateY(-100%);background-color:#fff}@media(min-width:992px){.main-nav-container{display:none}}.main-nav-container--open{-webkit-transform:translateY(0);transform:translateY(0)}.main-nav{display:flex;flex-direction:column;flex-grow:1;padding-top:40px;padding-left:38px}@media(max-width:759.98px){.main-nav{max-width:330px}}@media(max-width:991.98px){.main-nav{max-width:462px;padding-right:38px;overflow-y:auto;-webkit-overflow-scrolling:touch}}@media(min-width:760px){.main-nav{padding-top:80px;padding-left:44px}}@media(min-width:992px){.main-nav{display:flex;flex-direction:row;align-items:center;justify-content:space-around;margin-bottom:0;padding-top:0;padding-left:0}}@media(min-width:1280px){.main-nav{max-width:80%;margin-right:auto;margin-left:auto}}.main-nav-top{display:flex;flex-shrink:0;align-items:center;justify-content:space-between;height:80px;padding-right:10px;padding-left:10px}@media(min-width:500px){.main-nav-top{padding-right:20px;padding-left:20px}}.main-nav-bottom{padding-top:20px;text-align:center}.main-nav__close-btn{width:54px;height:54px;border:1px solid #ededed;border-radius:50%}@media(min-width:760px){.main-nav__close-btn{right:20px}}.main-nav__item{margin-bottom:20px}@media(min-width:760px){.main-nav__item{margin-bottom:40px}}@media(min-width:992px){.main-nav__item{margin-bottom:0}}.main-nav__item--dropdown .main-nav__item-title:before{position:absolute;top:50%;right:-18px;-webkit-transform:translateY(-50%) scaleY(-1);transform:translateY(-50%) scaleY(-1);font-size:5px}@media(min-width:992px){.main-nav__item--dropdown .main-nav__item-title:before{right:0}}.main-nav__item--active .main-nav__item-title{color:#e76d14!important}.main-nav__item--active .main-nav__item-title:before{-webkit-transform:scaleY(1) translateY(-50%);transform:scaleY(1) translateY(-50%)}.main-nav__item--active .main-nav__dropdown-list{display:block}.main-nav__item-title{font-size:16px;font-weight:300;line-height:1.88;position:relative;cursor:pointer}@media(min-width:992px){.main-nav__item-title{padding-right:18px;font-size:14px}.main-nav__item-title:focus,.main-nav__item-title:hover{color:#e76d14!important}}.main-nav__item-title--hoverable:hover{color:#e76d14!important}@media(min-width:992px){.main-nav__item-title--no-indent{padding-right:0}}.main-nav__dropdown-list{display:none;padding-top:20px}@media(min-width:992px){.main-nav__dropdown-list{display:flex;visibility:hidden;position:absolute;top:0;right:0;left:0;flex-wrap:wrap;padding-top:40px;padding-bottom:40px;opacity:0;background-color:#fff}}@media(min-width:992px)and (min-width:1280px){.main-nav__dropdown-list{height:250px}}.main-nav__dropdown-list--active{-webkit-box-shadow:0 -1px #ebebeb;box-shadow:0 -1px #ebebeb}@media(min-width:992px){.main-nav__dropdown-list--active{display:flex;visibility:visible;opacity:1}.main-nav__dropdown-list--active .main-nav__dropdown-wrp,.main-nav__dropdown-list--active .main-nav__grid-item{visibility:visible;-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@media(min-width:1280px){.main-nav__dropdown-list--autoheight{height:auto}}@media screen and (max-width:1599.98px){.main-nav__dropdown-list--fixed-padding{padding-left:0!important}}@media(min-width:992px){.main-nav__dropdown-wrp,.main-nav__grid-item{visibility:hidden;-webkit-transform:translateY(-20px);transform:translateY(-20px);-webkit-transition:.15s;transition:.15s;opacity:0}}@media(min-width:992px)and (max-width:1279.98px){.main-nav__dropdown-wrp:nth-child(3n+1),.main-nav__grid-item:nth-child(3n+1){-webkit-transition-delay:.1s;transition-delay:.1s}.main-nav__dropdown-wrp:nth-child(3n+2),.main-nav__grid-item:nth-child(3n+2){-webkit-transition-delay:.12s;transition-delay:.12s}.main-nav__dropdown-wrp:nth-child(3n+3),.main-nav__grid-item:nth-child(3n+3){-webkit-transition-delay:.14s;transition-delay:.14s}}@media(min-width:1280px){.main-nav__dropdown-wrp:first-child,.main-nav__grid-item:first-child{-webkit-transition-delay:.1s;transition-delay:.1s}.main-nav__dropdown-wrp:nth-child(2),.main-nav__grid-item:nth-child(2){-webkit-transition-delay:.12s;transition-delay:.12s}.main-nav__dropdown-wrp:nth-child(3),.main-nav__grid-item:nth-child(3){-webkit-transition-delay:.14s;transition-delay:.14s}.main-nav__dropdown-wrp:nth-child(4),.main-nav__grid-item:nth-child(4){-webkit-transition-delay:.16s;transition-delay:.16s}.main-nav__dropdown-wrp:nth-child(5),.main-nav__grid-item:nth-child(5){-webkit-transition-delay:.18s;transition-delay:.18s}.main-nav__dropdown-wrp:nth-child(6),.main-nav__grid-item:nth-child(6){-webkit-transition-delay:.2s;transition-delay:.2s}.main-nav__dropdown-wrp:nth-child(7),.main-nav__grid-item:nth-child(7){-webkit-transition-delay:.22s;transition-delay:.22s}.main-nav__dropdown-wrp:nth-child(8),.main-nav__grid-item:nth-child(8){-webkit-transition-delay:.24s;transition-delay:.24s}}@media(min-width:992px){.main-nav__dropdown-wrp{width:160px;margin-right:74px;margin-bottom:40px}}.main-nav__dropdown-wrp--nowrap{width:auto;white-space:nowrap}@media(min-width:992px){.main-nav__dropdown-wrp--marketplace{width:216px}}@media(min-width:1280px){.main-nav__dropdown-wrp--marketplace{width:auto;white-space:nowrap}}@media(min-width:992px){.main-nav__inner{visibility:hidden;position:fixed;top:80px;right:0;left:0;opacity:0}}@media(min-width:992px){.main-nav__inner--active{visibility:visible;opacity:1}}.main-nav__dropdown-item{font-size:14px;font-weight:300;line-height:1.86;margin-bottom:4px}@media(min-width:992px){.main-nav__dropdown-item{display:block}}.main-nav__dropdown-item:last-child{margin-bottom:0}.main-nav__dropdown-item:hover *{color:inherit!important}.main-nav__dropdown-item--title:hover{color:#000}.main-nav__dropdown-item--indent{margin-bottom:20px}.main-nav__dropdown-text{margin-bottom:0;padding-top:4px;color:rgba(0,0,0,.5);font-size:12px;font-weight:300;line-height:1.6}.main-header--fixed .main-nav__item-title{color:#000}@media(min-width:992px){.page-overlay{position:fixed;z-index:5;top:0;left:0;width:100%;height:100%;-webkit-transition:.15s;transition:.15s;background-color:rgba(0,0,0,.28);cursor:pointer}}.main-nav__grid{display:grid;grid-template-columns:10fr 9fr 15fr 16fr;width:100%;max-width:1200px;margin-right:40px;grid-column-gap:30px;-webkit-column-gap:30px;-moz-column-gap:30px;column-gap:30px;grid-row-gap:40px;row-gap:40px}@media screen and (max-width:1599.98px){.main-nav__grid{margin-right:auto;margin-left:auto;padding-right:15px;padding-left:15px}}.heading{margin-bottom:0;font-style:normal;font-weight:400}.heading--white{color:#fff}.heading--muffled,.page-text{opacity:.8}.heading--semi-visible{opacity:.5}.heading--black-underline{position:relative}.heading--black-underline:after{content:"";position:absolute;bottom:-6px;left:50%;width:80px;height:2px;-webkit-transform:translateX(-50%);transform:translateX(-50%);background-color:#000}.heading--size-xl{font-size:42px;font-weight:200;line-height:1.43}.heading--size-lg-xl{font-size:38px;font-weight:300;line-height:1.42}.heading--size-lg-md{font-size:34px;font-weight:300;line-height:1.5}.heading--size-lg{font-size:32px;font-weight:300;line-height:1.44}.heading--size-md{font-size:24px;font-weight:300;line-height:1.66}.heading--size-sm{font-size:20px;font-weight:300;line-height:1.8}.heading--size-xs{font-size:18px;font-weight:300;line-height:1.77}.heading--size-xxs{font-size:16px;font-weight:300;line-height:1.88}.heading--size-lg-big{font-size:38px;font-weight:700;line-height:1.42}@media(min-width:760px){.heading--size-lg-big{font-size:32px;font-weight:700;line-height:1.44}}.plain-text{margin-bottom:0;font-size:14px;font-weight:300;line-height:1.86}.plain-text--muffled{opacity:.8}.plain-text--semi-visible{opacity:.5}@media(min-width:760px){.heading--screen-md-size-xs{font-size:18px;font-weight:300;line-height:1.77}}@media(min-width:760px){.heading--screen-md-size-xxs{font-size:16px;font-weight:300;line-height:1.88}}@media(min-width:760px){.heading--screen-md-size-sm{font-size:20px;font-weight:300;line-height:1.8}}@media(min-width:760px){.heading--screen-md-size-md{font-size:24px;font-weight:300;line-height:1.66}}@media(min-width:760px){.heading--screen-md-size-lg{font-size:32px;font-weight:300;line-height:1.44}}@media(min-width:760px){.heading--screen-md-size-xl{font-size:42px;font-weight:200;line-height:1.43}}@media(min-width:760px){.heading--screen-md-size-xxl{font-size:48px;font-weight:200;line-height:1.42}}@media(min-width:992px){.heading--screen-lg-size-xxs{font-size:16px;font-weight:300;line-height:1.88}}@media(min-width:992px){.heading--screen-lg-size-xs{font-size:18px;font-weight:300;line-height:1.77}}@media(min-width:992px){.heading--screen-lg-size-sm{font-size:20px;font-weight:300;line-height:1.8}}@media(min-width:992px){.heading--screen-lg-size-md{font-size:24px;font-weight:300;line-height:1.66}}@media(min-width:992px){.heading--screen-lg-size-lg{font-size:32px;font-weight:300;line-height:1.44}}@media(min-width:992px){.heading--screen-lg-size-xl{font-size:42px;font-weight:200;line-height:1.43}}@media(min-width:992px){.heading--screen-lg-size-xxl{font-size:48px;font-weight:200;line-height:1.42}}@media(min-width:1280px){.heading--screen-xl-size-lg{font-size:32px;font-weight:300;line-height:1.44}}.page-title{font-size:24px;font-weight:300;line-height:1.66;margin-bottom:40px}@media(min-width:760px){.page-title{font-size:32px;font-weight:300;line-height:1.44;margin-bottom:16px}}@media(min-width:992px){.page-title{font-size:42px;font-weight:200;line-height:1.43}}.page-text{font-size:16px;font-weight:300;line-height:1.88;margin-bottom:40px}@media(min-width:760px){.page-text{margin-bottom:60px}}@media(min-width:992px){.page-text{margin-bottom:80px}}.page-text p:last-child{margin-bottom:0}.headline-txt-42{font-size:24px;font-weight:200;line-height:1.4583333333}@media(min-width:760px){.headline-txt-42{font-size:42px;line-height:1.4285714286}}.headline-txt-24-32{font-size:24px;font-weight:300;line-height:1.4583333333}@media(min-width:760px){.headline-txt-24-32{font-size:32px;line-height:1.6875}}.body-txt-14{font-size:14px;font-weight:300;line-height:1.4285714286}.main-button{display:inline-block;max-width:100%;padding:15px 30px;overflow:hidden;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out;border:none;border-radius:25px;font-family:inherit;font-size:13px;letter-spacing:.1px;line-height:20px;text-overflow:ellipsis;vertical-align:middle;white-space:nowrap;cursor:pointer}.main-button:focus{outline:none}.main-button .icon,.main-button .main-nav__item--dropdown .main-nav__item-title:before,.main-nav__item--dropdown .main-button .main-nav__item-title:before{vertical-align:middle}.main-button .icon-arrow-right-short{margin-left:12px;font-size:8px}.main-button--violet-black{background-color:#1c0058;color:#fff}.main-button--violet-black:focus,.main-button--violet-black:hover{background-color:#000}.main-button--violet-500-black{background-color:#230070;color:#fff}.main-button--violet-500-black:focus,.main-button--violet-500-black:hover{background-color:#000}.main-button--violet-450-black{background-color:#0040c0;color:#fff}.main-button--violet-450-black:focus,.main-button--violet-450-black:hover{background-color:#000}.main-button--white-violet{background-color:#fff;color:#1c0058}.main-button--white-violet:focus,.main-button--white-violet:hover{background-color:#1c0058;color:#fff}.main-button--white-blue-violet{background-color:#fff;color:#0850d7}.main-button--white-blue-violet:focus,.main-button--white-blue-violet:hover{background-color:#1c0058;color:#fff}.main-button--white-black{background-color:#fff;color:#000}.main-button--white-blue{background-color:#fff;color:#0850d7}.main-button--transparent-violet{padding-top:13px;padding-bottom:13px;border:2px solid #1c0058;background-color:transparent;color:#1c0058}.main-button--transparent-violet:hover{background-color:#1c0058;color:#fff}.main-button--transparent-violet-450{padding-top:13px;padding-bottom:13px;border:2px solid #0040c0;background-color:transparent;color:#0040c0}.main-button--transparent-violet-450:hover{background-color:#0040c0;color:#fff}.main-button--transparent-violet-white{background-color:transparent;color:#1c0058}.main-button--transparent-violet-white.active,.main-button--transparent-violet-white:focus,.main-button--transparent-violet-white:hover{background-color:#1c0058;color:#fff}.main-button--transparent-white-blue{padding-top:13px;padding-bottom:13px;border:2px solid;color:#fff}.main-button--transparent-white-blue.active,.main-button--transparent-white-blue:focus,.main-button--transparent-white-blue:hover{border-color:#fff;background-color:#fff;color:#0142bb}.main-button--transparent-white-white{padding-top:13px;padding-bottom:13px;border:2px solid #fff;background-color:transparent;color:#fff}.main-button--transparent-white-white:focus,.main-button--transparent-white-white:hover{background-color:#fff;color:#230070}.main-button--transparent-blue{padding-top:13px;padding-bottom:13px;border:2px solid #0142bb;background-color:transparent;color:#0142bb}.main-button--blue,.main-button--transparent-blue:focus,.main-button--transparent-blue:hover{background-color:#0142bb;color:#fff}.main-button--blue:focus,.main-button--blue:hover{background-color:#1c0058;color:#fff}.main-button--grey{background-color:#dfdfdf;color:#000}.main-button--grey:focus,.main-button--grey:hover{background-color:hsla(0,0%,87.5%,.7);color:#000}.main-button--transparent-black{color:#000}.main-button--transparent-black:focus,.main-button--transparent-black:hover{background-color:#000;color:#fff}.main-button--sm{padding-top:13px;padding-bottom:12px;border-radius:20px}.main-button--has-shadow{-webkit-box-shadow:0 10px 24px 0 rgba(0,0,0,.08);box-shadow:0 10px 24px 0 rgba(0,0,0,.08)}.main-button--social{padding-top:5px;padding-bottom:5px;padding-left:6px;overflow:visible}.main-button--social .icon:first-child,.main-button--social .main-nav__item--dropdown .main-nav__item-title:first-child:before,.main-nav__item--dropdown .main-button--social .main-nav__item-title:first-child:before{margin-right:6px}.main-button--social .icon:first-child:before,.main-button--social .main-nav__item--dropdown .main-nav__item-title:first-child:before,.main-button--social:focus .icon:first-child:before,.main-button--social:focus .main-nav__item--dropdown .main-nav__item-title:first-child:before,.main-button--social:hover .icon:first-child:before,.main-button--social:hover .main-nav__item--dropdown .main-nav__item-title:first-child:before,.main-nav__item--dropdown .main-button--social .main-nav__item-title:first-child:before,.main-nav__item--dropdown .main-button--social:focus .main-nav__item-title:first-child:before,.main-nav__item--dropdown .main-button--social:hover .main-nav__item-title:first-child:before{left:auto}.cookies-banner{position:fixed;z-index:1051;bottom:0;left:0;width:100%;padding:15px 5px;background-color:#074fde;-webkit-box-shadow:0 -2px 10px 0 rgba(0,0,0,.1);box-shadow:0 -2px 10px 0 rgba(0,0,0,.1)}.cookies-banner__text{margin-bottom:30px;color:#fff;font-size:15px;line-height:1.6}.cookies-banner__text-link{margin-left:10px;font-weight:300;text-decoration:underline}.cookies-banner__controls{text-align:center}.cookies-banner__controls-close{position:absolute;top:10px;right:10px;width:24px;height:24px;color:#fff}@media(min-width:760px){.cookies-banner__text{margin-bottom:0}.cookies-banner__controls{text-align:right}.cookies-banner__controls-close{position:static;margin-left:30px}}.page-content>:first-child:not(style),.page-content>style+*{padding-top:80px}a{background-color:transparent;color:inherit;text-decoration:none}.d-none,.hidden{display:none}@media(min-width:500px){.d-sm-inline-block{display:inline-block}}@media(min-width:992px){.d-lg-none{display:none}}.pt-0{padding-top:0!important}.font-700{font-weight:700}.mb-0{margin-bottom:0!important}.mb-16{margin-bottom:16px!important}.mb-24{margin-bottom:24px!important}.mb-40{margin-bottom:40px!important}.mb-56{margin-bottom:56px!important}.in-white{color:#fff!important}.bg-black{background-color:#000!important}.bg-white{background-color:#fff!important}.main-input__field{display:block;width:100%}@media(max-width:759.98px){.disable-mobile-animation{-webkit-transform:none!important;transform:none!important;-webkit-transition:none!important;transition:none!important;-webkit-animation:none!important;animation:none!important;opacity:1!important}}.blog-header{position:relative}.blog-header:before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;opacity:.3;background-color:#000}.blog-header--img{background-repeat:no-repeat;background-position:50%;background-size:cover}.blog-header--img.blog-header:before{opacity:.5}.blog-header--violet{background-color:#33158a}.blog-header--blue{background-color:#0142bb}.blog-header--orange{background-color:#e76d14}.blog-header--gray{background-color:#ededed}.blog-header__image{display:inline-block;max-width:230px}.blog-header__title{margin-bottom:10px;color:#fff;font-size:44px;font-weight:400;line-height:1.3}.blog-header__container{padding-top:10px;padding-bottom:10px}.blog-header__tag-list-item{display:inline-block;position:relative;padding-right:10px;padding-left:15px;color:hsla(0,0%,100%,.3);font-size:12px;font-weight:700;text-transform:uppercase;vertical-align:top}.blog-header__tag-list-item:before{content:"";position:absolute;top:calc(50% - 1.5px);left:0;width:3px;height:3px;border-radius:50%;background-color:currentColor}.blog-header__tag-list-item:first-child{padding-left:0}.blog-header__tag-list-item:first-child:before{display:none}.blog-header__authors-wrap{display:inline-block;max-width:252px}@media(min-width:760px){.blog-header__authors-wrap{display:inline-grid;grid-template-columns:repeat(2,1fr);max-width:none;grid-row-gap:5px;row-gap:5px;grid-column-gap:30px;-webkit-column-gap:30px;-moz-column-gap:30px;column-gap:30px}}@media(min-width:992px){.blog-header__authors-wrap{grid-template-columns:repeat(3,1fr)}}.blog-header__author{display:inline-flex;margin-right:15px;margin-bottom:5px;margin-left:15px}@media(min-width:760px){.blog-header__author{margin-right:0;margin-bottom:0;margin-left:0}}.blog-header__tags{padding-top:24px}.blog-header__tags-label{margin-bottom:16px;color:hsla(0,0%,100%,.5);font-size:12px;font-weight:600;letter-spacing:.5px;line-height:1;text-align:left;text-transform:uppercase}.blog-header__tags-list{display:flex;flex-wrap:wrap}.blog-header__author-img{-o-object-fit:cover;object-fit:cover}@media(min-width:500px){.blog-header__title{margin-bottom:20px}.blog-header__tag-list-item{margin-bottom:10px}.blog-header__author{align-items:center}}@media(min-width:500px)and (min-width:760px){.blog-header__author-img{margin-right:15px}}@media(min-width:500px){.blog-header__tags{display:flex}}@media(min-width:500px){.blog-header__tags-label{flex-shrink:0;margin-right:16px;margin-bottom:8px;padding-top:12px;text-align:center}}@media(min-width:760px){.blog-header{overflow-x:hidden}.blog-header__container{padding-bottom:35px}.blog-header__title{position:relative}.blog-header__image{position:absolute;top:50px;right:-64px;max-width:360px}}@media(min-width:992px){.blog-header__image{right:-46px}}@media(min-width:1280px){.blog-header__image{right:0}}.blog-breadcrumbs{font-size:12px}.blog-breadcrumbs__item-link{opacity:.5;color:inherit}.blog-breadcrumbs__item-link:after{content:">";padding-right:5px;padding-left:5px}.blog-breadcrumbs__item{display:inline-block;color:#fff}.blog-breadcrumbs__item:last-child .blog-breadcrumbs__item-link{opacity:1}.blog-breadcrumbs__item:last-child .blog-breadcrumbs__item-link:after{content:none}@media(min-width:760px){.blog-breadcrumbs{margin-bottom:25px}}.blog-breadcrumbs__item-link--disabled{pointer-events:none}.chip{-webkit-transition:background-color,color;transition:background-color,color;flex-shrink:0;height:36px;margin-right:8px;margin-bottom:8px;padding:0 20px;border-radius:18px;background-color:#33158a;color:hsla(0,0%,100%,.5);font-size:12px;line-height:36px;text-align:center}@media(prefers-reduced-motion:reduce){.chip{-webkit-transition:none;transition:none}}.chip--outline-white{border:1px solid #fff;background-color:transparent;color:#fff}.chip--outline-white:focus,.chip--outline-white:hover{background-color:#fff;color:rgba(0,0,0,.8)}.chip--blue-white{background-color:#0142bb;color:#fff}.chip--blue-white:focus,.chip--blue-white:hover{background-color:#ebebeb;color:rgba(0,0,0,.8)}.round-img{display:inline-block;border-radius:50%;background-color:#bbb;background-size:cover}.round-img--sm{width:50px;height:50px}.blog-nav{display:flex;align-items:center;min-height:67px;padding-top:5px;padding-bottom:5px}.blog-nav-wrap{position:sticky;z-index:3;top:80px;border-bottom:1px solid #ebebeb;background-color:#fff}.article-content-page .blog-nav-wrap{position:static;top:0}.blog-content-page.scrolling-down .blog-nav-wrap,.blog-content-page.scrolling-down .main-header{-webkit-transform:translateY(-80px);transform:translateY(-80px)}.blog-nav__content{display:flex;justify-content:center;width:100%;padding-right:5px;padding-left:35px}.blog-nav__content-item{padding:5px 20px;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out;color:#000;font-size:14px;font-weight:600;line-height:1.4}.blog-nav__content-item.active,.blog-nav__content-item:hover{color:#245cc5}.blog-nav__dropdown-menu{width:100vw;margin-top:5px}.show .blog-nav__dropdown-menu{display:block}.blog-nav__open-search-icon{font-family:icomoon!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;font-weight:400;line-height:1.1;text-transform:none;speak:none;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out;color:#000;font-size:22px;vertical-align:middle}.blog-nav__open-search{color:#bbb;font-size:12px;text-transform:uppercase;cursor:pointer}.blog-nav__open-search:hover .blog-nav__open-search-icon{color:#245cc5}.blog-nav__main-link{margin-bottom:15px;color:#1c0058;font-size:13px;cursor:pointer}.blog-loading-btn-in-progress .icon-circular-arrow:before{display:inline-block;-webkit-animation:icon-rotate 2s linear infinite;animation:icon-rotate 2s linear infinite}@-webkit-keyframes icon-rotate{0%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}to{-webkit-transform:rotate(1114deg);transform:rotate(1114deg)}}@keyframes icon-rotate{0%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}to{-webkit-transform:rotate(1114deg);transform:rotate(1114deg)}}@media(min-width:760px){.blog-nav__content{display:flex;align-items:center;justify-content:center;padding-right:0;padding-left:0}.article-content-page .blog-nav__content{justify-content:flex-start}.article-content-page .blog-tag:first-child .blog-nav__content-item{padding-left:0}.blog-nav__open-search{position:relative;top:0;right:0;margin:0 30px 0 40px;-webkit-transform:translateX(0);transform:translateX(0)}.article-content-page .blog-nav-wrap{position:relative}.article-content-page .blog-nav-wrap .blog-nav__content,.article-content-page .blog-nav-wrap .container{position:static}.article-content-page .blog-nav-wrap .blog-nav__open-search{margin-right:0}}@media(min-width:992px){.article-content-page .blog-nav-wrap .blog-nav__open-search{margin-right:30px}}@media(max-width:759.98px){.blog-nav__mob-wrapper{flex-grow:1}}@media(min-width:992px){.article-sticky-left{display:flex;position:absolute;z-index:1;top:50px;right:calc(50vw + 400px);bottom:0;flex-direction:column;align-items:center}}@media(min-width:1280px){.article-sticky-left{right:calc(50vw + 500px)}}.article-sticky-left__inner{display:flex;position:sticky;top:90px;flex-direction:column;flex-wrap:wrap;align-items:center}.blog-content{padding-top:20px}@media(min-width:992px){.blog-content{padding-top:50px}}.blog-nav__open-search-icon:before{content:""}@media(max-width:759.98px){.hidden-sm-down{display:none}}@media(min-width:760px){.hidden-md-up{display:none}}.text-center{text-align:center}@media(min-width:760px){.text-md-left{text-align:left}}.font-12{font-size:12px}.font-14{font-size:14px}.mb-0{margin-bottom:0}.mb-10{margin-bottom:10px}.mb-20{margin-bottom:20px}@media(max-width:499.98px){.hidden-xs-down{display:none}}@media(max-width:991.98px){.show-on-mobile{display:block}}@media(min-width:760px){.show-on-mobile{display:none}}.dropdown-menu{display:none}.pt-30{padding-top:30px}.d-flex{display:flex}.flex-wrap{flex-wrap:wrap}@media(min-width:760px){.d-md-inline-block{display:inline-block}}@media(min-width:760px){.d-md-block{display:block}}.relative{position:relative}
+</style>
+
+<meta content="https://rubygarage.org/blog/how-to-build-a-b2b-website" property="og:url">
+<meta name="description" content="Discover a step-by-step guide on how to build a B2B ecommerce website. Find out what to keep in mind when launching a B2B site to join a market that’s estimated to be worth over $20 trillion by 2027.">
+<title>
+How to Build a B2B Ecommerce Website: A Step-by-Step Guide | RubyGarage Blog
+</title>
+<meta content="article" property="og:type">
+<meta content="How to Build a B2B Website Like Alibaba or Amazon Business" property="og:title">
+<meta content="Find out the five steps you need to take to build your own B2B ecommerce website. Discover the pros and cons of creating a B2B website with the help of a SaaS platform, a white label product, and an open source solution. " property="og:description">
+<meta content="how to build a b2b website, how to create b2b website, how to make b2b website, how to create a b2b e commerce website, how to develop b2b website, how to start b2b website" name="keywords">
+<meta content="summary_large_image" name="twitter:card">
+<script src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/c3928a930cad43b68af26ae960d70cca23f2f1362f9145d0a7629034d71b654a" type="text/javascript" async=""></script><script async="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/f.txt"></script><script type="text/javascript" async="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/analytics.js.download"></script><script async="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/gtm.js.download"></script><script type="text/javascript" async="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/insight.min.js.download"></script><script>
+  window.dataLayer = (window.dataLayer || []);
+  window.dataLayer.push({"pageCategory":['awareness']});
+</script>
+
+
+<meta content="https://d3smn0u2zr7yfv.cloudfront.net/uploads/article/image_with_background/538/banner-with-back.png" property="og:image">
+<meta content="https://d3smn0u2zr7yfv.cloudfront.net/uploads/article/image_with_background/538/banner-with-back.png" name="twitter:image">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://rubygarage.org/blog.rss">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="GwcqB3QQT7PPC2kzei4Os8ciev1FIYKg1bHBWEb0Q8QlEEAZGaTqOEsv4dkMB0LqJIcNN8Ram25uKmX/BEG/qA==">
+
+
+
+<meta content="#1c0058" name="theme-color">
+<link href="https://rubygarage.org/favicon.ico" rel="icon" type="image/x-icon">
+<script>setTimeout(function(){window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 1882360,playbookUuid: '23a11c44-d616-4d91-81f0-a3c0bcecfbf7',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();var script = document.createElement('script'); script.setAttribute('src','https://leadbooster-chat.pipedrive.com/assets/loader.js'); document.head.appendChild(script); }, 5000)</script>
+
+<link rel="preload" href="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/show-e5cdbf3b4d456260b00d.js.download" as="script" type="text/javascript">
+<script src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/loader.js.download"></script><script src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/f(1).txt"></script><style>html body #LeadboosterContainer {
+	cursor: default !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-shadow: none !important;
+	min-height: 0 !important;
+	min-width: 0 !important;
+	border: none !important;
+	display: block !important;
+	position: fixed !important;
+	bottom: 0 !important;
+	right: 0 !important;
+	visibility: visible !important;
+	z-index: 2147483647 !important;
+	max-height: 100vh !important;
+	max-width: 100vw !important;
+	background: none transparent !important;
+	opacity: 1 !important;
+	pointer-events: auto !important;
+	touch-action: auto !important;
+	width: 104px !important;
+	height: 104px !important;
+	transition: all 0s !important;
+	transition-delay: 400ms !important;
+}
+
+html body #LeadboosterContainer.openedChat {
+	width: 100% !important;
+	height: 100% !important;
+	top: 0 !important;
+	left: 0 !important;
+	transition-delay: 0s !important;
+}
+
+html body #LeadboosterContainer.proactiveChat {
+	width: 425px !important;
+	transition-delay: 0s !important;
+	height: 100% !important;
+}
+
+@media (min-width: 576px) {
+	html body #LeadboosterContainer {
+		bottom: 28px !important;
+		right: 28px !important;
+	}
+
+	html body #LeadboosterContainer.openedChat {
+		width: 415px !important;
+		height: 540px !important;
+		top: auto !important;
+		left: auto !important;
+	}
+}
+</style></head>
+<body class="webp" data-aos-duration="1200">
+<script>
+var i=new Image;i.onload=i.onerror=function(){document.body.classList.add(i.height==1?"webp":"no-webp")};i.src="data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
+</script>
+
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-WK9RHZ' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+<div class="main-nav-container nav-js">
+<div class="main-nav-top">
+<a aria-label="Link to Home page" class="main-logo" href="https://rubygarage.org/">
+<div class="main-logo__icon"></div>
+<div class="main-logo__text"></div>
+</a>
+<button aria-label="close" class="main-nav__close-btn nav-toggle-js" type="button">
+<i class="icon icon-cross d-block in-violet-500"></i>
+</button>
+</div>
+<ul class="main-nav">
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js">Services</span>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item">
+<span class="main-nav__dropdown-item main-nav__dropdown-item--title font-700">
+Product Management
+</span>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/product-ideation-services">Product Discovery</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/digital-product-design-agency">Product Design</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/services/web-design-company">Design</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/web-app-design-services">Web Design</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/mobile-app-design-services">Mobile Application Design</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/ux-design-review-services">UX Design Review</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/services/web-development">Web Development</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/ruby-on-rails-development">Web development in <span class="font-600 in-violet-450">Ruby on Rails</span></a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/custom-api-development-services"><span class="font-600 in-violet-450">Backend API</span> development in Ruby on Rails</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/react-js-development">Web applications development on <span class="font-600 in-violet-450">React.js</span></a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/services/mobile-app-development">Mobile Development</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/react-native-development">Mobile applications development on <span class="font-600 in-violet-450">React Native</span></a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/ios-app-development"><span class="font-600 in-violet-450">iOS</span> applications development</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/android-app-development"><span class="font-600 in-violet-450">Android</span> applications development</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/services/software-testing"><div class="main-nav__dropdown-item font-700">
+Software Testing
+</div>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/full-lifecycle-software-testing">Full Lifecycle Testing</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/quality-assurance-consulting">Quality Assurance Consulting</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/manual-software-testing">Manual Testing</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/automation-software-testing-services">Automation Testing</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item">
+<span class="main-nav__dropdown-item main-nav__dropdown-item--title font-700">
+Technology Consulting
+</span>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/devops-services">DevOps</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/maintenance-and-support-services">Maintenance</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/code-review-services">Source Code Audit</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/hipaa-consulting-services">HIPAA security risks assessment &amp; consulting</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item main-nav__dropdown-item--indent">
+<a href="https://rubygarage.org/services/enterprise-software-development"><span class="font-700">For Enterprise</span>
+<p class="main-nav__dropdown-text">
+Check out our experience in building enterprise software: from custom development and digital transformation to mobility solutions and data management.
+</p>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/startup-product-development"><span class="font-700">For Startups</span>
+<p class="main-nav__dropdown-text">
+Our client’s success stories speak better than words. Check out our approach and services for startup development.
+</p>
+</a></li>
+</ul>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js">Solutions</span>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/market-age-online-store"><span class="font-700">Online Store</span>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/marketplaces-development-services"><span class="font-700">Custom Marketplace</span>
+</a></li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/solutions/multi-vendor-marketplace-platform">Multi-Vendor Marketplace
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/market-age-b2b-multi-vendor-marketplace-solution">B2B - Become a mediator between big market players
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/b2c-marketplace-software-solution">B2C - Bring businesses and customers together
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/market-age-c2c-marketplace-solution">C2C - Move peer-to-peer relationships to a new level
+</a></li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/chat-app-solution"><span class="font-700">Chat App Solution</span>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/custom-booking-system"><span class="font-700">Custom Booking System</span>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/solutions/video-conferencing-solution"><span class="font-700">Video Conferencing Solution</span>
+</a></li>
+</ul>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js">Industries</span>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/expertise/retail-software-development"><span class="font-700">Retail</span>
+<p class="main-nav__dropdown-text">Check out services we provide for ecommerce brands and marketplaces.</p>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/expertise/fintech-software-development"><span class="font-700">Fintech</span>
+<p class="main-nav__dropdown-text">See the services and technology solutions we offer the Fintech industry.</p>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/expertise/educational-software-development"><span class="font-700">Education</span>
+<p class="main-nav__dropdown-text">Discover the services we deliver to companies in the Education domain</p>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/expertise/healthcare-software-development"><span class="font-700">Healthcare</span>
+<p class="main-nav__dropdown-text">Find out how our services help healthcare organizations facilitate workflows.</p>
+</a></li>
+</ul>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js">Company</span>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/company/software-engineering">Engineering</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/business-analysis-office">Business Analysis Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/project-management-office">Project Management Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/design-office">Design Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/programming-and-engineering-office">Programming and Engineering Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/quality-assurance-office">Quality Assurance Office</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item main-nav__dropdown-item--indent">
+<a href="https://rubygarage.org/company/about"><span class="font-700">About</span>
+<p class="main-nav__dropdown-text">Find out what makes us one of the top software development companies in Europe.</p>
+</a></li>
+<li class="main-nav__dropdown-item main-nav__dropdown-item--indent">
+<a href="https://rubygarage.org/company/workflow"><span class="font-700">Workflow</span>
+<p class="main-nav__dropdown-text">We believe that clear and transparent workflow is a key to success. See every step of product development with us.</p>
+</a></li>
+</ul>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--hoverable" href="https://rubygarage.org/case-studies">Case Studies</a>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--hoverable" href="https://rubygarage.org/blog">Blog</a>
+</li>
+</ul>
+<div class="main-nav-bottom">
+<a class="main-header__get-button main-button d-inline-block" aria-label="Contact us" href="https://rubygarage.org/contacts"><span class="mr-15">Get in touch</span>
+<i class="icon icon-mail-fill font-12"></i>
+</a></div>
+</div>
+
+<div class="" id="cookies-banner">
+<div class="cookies-banner">
+<div class="container static">
+<div class="row align-items-center">
+<div class="col-md-7 col-xl-8">
+<div class="cookies-banner__text">
+This website uses cookies to ensure you get the best experience on our website.
+<a class="policy cookies-banner__text-link" href="https://rubygarage.org/privacy-policy">Learn more</a>
+</div>
+</div>
+<div class="cookies-banner__controls col-md-5 col-xl-4 static">
+<button class="main-button main-button--white-blue-violet move-icon-on-hover" id="accept-cookies" type="button">
+Agree &amp; Dismiss
+<i class="icon icon-arrow-right-short ml-15 font-8"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+  if (document.cookie.split('; ').indexOf('cookie_consented=true')==-1) {
+    document.getElementById('cookies-banner').classList.remove('hidden')
+  }
+</script>
+
+<div class="page-container blog-page article-content-page">
+<div class="header-wrap-white">
+<header class="main-header main-header-js main-header--blog-page">
+<div class="main-header__left">
+<a aria-label="Link to Home page" class="main-logo" href="https://rubygarage.org/">
+<div class="main-logo__icon"></div>
+<div class="main-logo__text"></div>
+</a>
+</div>
+<div class="main-header__center">
+<ul class="main-nav">
+<li class="main-nav__item main-nav__item--dropdown">
+<button class="main-nav__item-title nav-item-js" data-menu-item="1">Services</button>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<button class="main-nav__item-title nav-item-js" data-menu-item="2">Solutions</button>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<button class="main-nav__item-title nav-item-js" data-menu-item="3">Industries</button>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<button class="main-nav__item-title nav-item-js" data-menu-item="4">Company</button>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--no-indent false" href="https://rubygarage.org/case-studies">Case Studies</a>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--no-indent false" href="https://rubygarage.org/blog">Blog</a>
+</li>
+</ul>
+<div class="main-nav__inner">
+<div class="main-nav__dropdown-list main-nav__dropdown-list--fixed-padding main-nav__dropdown-list--autoheight dropdown-item-js" data-dropdown-item="1" style="padding-left: 338px;">
+<div class="main-nav__grid">
+<div class="main-nav__grid-item">
+<span class="main-nav__dropdown-item main-nav__dropdown-item--title font-700">
+Product Management
+</span>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/product-ideation-services">Product Discovery</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/digital-product-design-agency">Product Design</a>
+</div>
+<div class="main-nav__grid-item">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/services/web-design-company">
+Design
+</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/web-app-design-services">Web Design</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/mobile-app-design-services">Mobile Application Design</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/ux-design-review-services">UX Design Review</a>
+</div>
+<div class="main-nav__grid-item">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/services/web-development">
+Web Development
+</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/ruby-on-rails-development">Web development in <span class="font-600 in-violet-450">Ruby on Rails</span></a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/custom-api-development-services"><span class="font-600 in-violet-450">Backend API</span> development in Ruby on Rails</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/react-js-development">Web applications development on <span class="font-600 in-violet-450">React.js</span></a>
+</div>
+<div class="main-nav__grid-item">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/services/mobile-app-development">
+Mobile Development
+</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/react-native-development">Mobile applications development on <span class="font-600 in-violet-450">React Native</span></a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/ios-app-development"><span class="font-600 in-violet-450">iOS</span> applications development</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/android-app-development"><span class="font-600 in-violet-450">Android</span> applications development</a>
+</div>
+<div class="main-nav__grid-item">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/services/software-testing">
+Software Testing
+</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/quality-assurance-consulting">Quality Assurance Consulting</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/full-lifecycle-software-testing">Full Lifecycle Testing</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/manual-software-testing">Manual Testing</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/automation-software-testing-services">Automation Testing</a>
+</div>
+<div class="main-nav__grid-item">
+<span class="main-nav__dropdown-item main-nav__dropdown-item--title font-700">
+Technology Consulting
+</span>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/devops-services">DevOps</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/maintenance-and-support-services">Maintenance</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/code-review-services">Source Code Audit</a>
+<a class="main-nav__dropdown-item " href="https://rubygarage.org/services/hipaa-consulting-services">HIPAA security risks assessment &amp; consulting</a>
+</div>
+<div class="main-nav__grid-item">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/enterprise-software-development"><span class="font-700">For Enterprise</span>
+<p class="main-nav__dropdown-text">Check out our experience in building enterprise software: from custom development and digital transformation to mobility solutions and data management.</p>
+</a></div>
+<div class="main-nav__grid-item">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/startup-product-development"><span class="font-700">For Startups</span>
+<p class="main-nav__dropdown-text">Our client’s success stories speak better than words. Check out our approach and services for startup development.</p>
+</a></div>
+</div>
+</div>
+<div class="main-nav__dropdown-list dropdown-item-js" data-dropdown-item="2" style="padding-left: 338px;">
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/market-age-online-store"><span class="font-700">Online Store</span>
+<p class="main-nav__dropdown-text"></p>
+</a><a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/marketplaces-development-services"><span class="font-700">Custom Marketplace</span>
+<p class="main-nav__dropdown-text"></p>
+</a></div>
+<div class="main-nav__dropdown-wrp main-nav__dropdown-wrp--marketplace">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/solutions/multi-vendor-marketplace-platform">Multi-Vendor Marketplace
+</a><a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/market-age-b2b-multi-vendor-marketplace-solution">B2B - Become a mediator between big market players
+</a><a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/b2c-marketplace-software-solution">B2C - Bring businesses and customers together
+</a><a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/market-age-c2c-marketplace-solution">C2C - Move peer-to-peer relationships to a new level
+</a></div>
+<div class="main-nav__dropdown-wrp main-nav__dropdown-wrp--nowrap">
+<a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/chat-app-solution"><span class="font-700">Chat App Solution</span>
+<p class="main-nav__dropdown-text"></p>
+</a><a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/custom-booking-system"><span class="font-700">Custom Booking System</span>
+<p class="main-nav__dropdown-text"></p>
+</a><a class="main-nav__dropdown-item" href="https://rubygarage.org/solutions/video-conferencing-solution"><span class="font-700">Video Conferencing Solution</span>
+<p class="main-nav__dropdown-text"></p>
+</a></div>
+</div>
+<div class="main-nav__dropdown-list dropdown-item-js" data-dropdown-item="3" style="padding-left: 338px;">
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/expertise/retail-software-development"><span class="font-700">Retail</span>
+<p class="main-nav__dropdown-text">Check out services we provide for ecommerce brands and marketplaces.</p>
+</a></div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/expertise/fintech-software-development"><span class="font-700">Fintech</span>
+<p class="main-nav__dropdown-text">See the services and technology solutions we offer the Fintech industry.</p>
+</a></div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/expertise/educational-software-development"><span class="font-700">Education</span>
+<p class="main-nav__dropdown-text">Discover the services we deliver to companies in the Education domain</p>
+</a></div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/expertise/healthcare-software-development"><span class="font-700">Healthcare</span>
+<p class="main-nav__dropdown-text">Find out how our services help healthcare organizations facilitate workflows.</p>
+</a></div>
+</div>
+<div class="main-nav__dropdown-list main-nav__dropdown-list--autoheight dropdown-item-js" data-dropdown-item="4" style="padding-left: 338px;">
+<div class="d-flex">
+<div class="main-nav__dropdown-wrp main-nav__dropdown-wrp--nowrap">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/company/software-engineering">Engineering</a>
+<a class="main-nav__dropdown-item" href="https://rubygarage.org/company/business-analysis-office">Business Analysis Office</a>
+<a class="main-nav__dropdown-item" href="https://rubygarage.org/company/project-management-office">Project Management Office</a>
+<a class="main-nav__dropdown-item" href="https://rubygarage.org/company/design-office">Design Office</a>
+<a class="main-nav__dropdown-item" href="https://rubygarage.org/company/programming-and-engineering-office">Programming and Engineering Office</a>
+<a class="main-nav__dropdown-item" href="https://rubygarage.org/company/quality-assurance-office">Quality Assurance Office</a>
+</div>
+</div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/company/about"><span class="font-700">About</span>
+<p class="main-nav__dropdown-text">Find out what makes us one of the top software development companies in Europe.</p>
+</a></div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/company/workflow"><span class="font-700">Workflow</span>
+<p class="main-nav__dropdown-text">We believe that clear and transparent workflow is a key to success. See every step of product development with us.</p>
+</a></div>
+</div>
+</div>
+</div>
+<div class="main-header__right">
+<a class="main-header__get-button main-button d-none d-sm-inline-block" aria-label="Contact us" href="https://rubygarage.org/contacts"><span class="mr-15 hidden-xs-down">Get in touch</span>
+<span class="icon icon-mail-fill font-12"></span>
+</a><button aria-label="Toggle button" class="main-header__menu-btn nav-toggle-js d-lg-none" type="button">
+<span class="main-header__menu-btn-line"></span>
+<span class="main-header__menu-btn-line"></span>
+<span class="main-header__menu-btn-line"></span>
+</button>
+</div>
+</header>
+
+
+</div>
+
+<div class="page-content">
+<div class="blog-header blog-header--orange">
+<div class="blog-header__container container">
+<div class="row">
+<div class="col-12 hidden-md-up text-center">
+<div class="blog-header__image">
+<img width="360" height="207" alt="" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_main-image.png">
+</div>
+</div>
+<div class="col-xl-11 offset-lg-1 text-center text-md-left">
+<div class="blog-header__image hidden-sm-down">
+<img width="360" height="207" alt="" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_main-image.png">
+</div>
+<ul class="blog-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link" itemprop="item" href="https://rubygarage.org/"><span itemprop="name">
+RubyGarage
+</span>
+</a><meta content="1" itemprop="position">
+</li>
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link" itemprop="item" href="https://rubygarage.org/blog"><span itemprop="name">
+Blog
+</span>
+</a><meta content="2" itemprop="position">
+</li>
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link" itemprop="item" href="https://rubygarage.org/blog/category/entrepreneurship"><span itemprop="name">
+Entrepreneurship
+</span>
+</a><meta content="3" itemprop="position">
+</li>
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link blog-breadcrumbs__item-link--disabled" itemprop="item" href="https://rubygarage.org/blog/how-to-build-a-b2b-website"><span itemprop="name">
+How to Build a B2B Website
+</span>
+<meta content="4" itemprop="position">
+</a></li>
+</ul>
+
+</div>
+<div class="col-md-8 col-xl-7 offset-lg-1 text-center text-md-left">
+<h1 class="blog-header__title">
+How to Build a B2B Website Like Alibaba or Amazon Business
+</h1>
+<ul class="mb-20">
+<li class="blog-header__tag-list-item">
+2503 views
+</li>
+<li class="blog-header__tag-list-item">
+15 min
+</li>
+<li class="blog-header__tag-list-item">
+Nov 20, 2020
+</li>
+</ul>
+<div class="blog-header__authors-wrap mb-10">
+<div class="blog-header__author">
+<img srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/75/primary_mini_magick20210929-1-rsm4vb.jpg 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/75/secondary_mini_magick20210929-1-rsm4vb.jpg 2x" class="blog-authors__img round-img round-img--sm" alt="Yana S." width="50" height="50" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_mini_magick20210929-1-rsm4vb.jpg">
+
+<div class="in-white hidden-sm-down">
+<p class="font-14 mb-0">
+Yana S.
+</p>
+<p class="font-12 opacity-05 mb-0">
+Copywriter
+</p>
+</div>
+</div>
+<div class="blog-header__author">
+<img srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/77/primary_mini_magick20210929-1-11y7jvo.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/77/secondary_mini_magick20210929-1-11y7jvo.png 2x" class="blog-authors__img round-img round-img--sm" alt="Kirill Z." width="50" height="50" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_mini_magick20210929-1-11y7jvo.png">
+
+<div class="in-white hidden-sm-down">
+<p class="font-14 mb-0">
+Kirill Z.
+</p>
+<p class="font-12 opacity-05 mb-0">
+Business Analyst
+</p>
+</div>
+</div>
+</div>
+<div class="blog-header__tags">
+<p class="blog-header__tags-label">
+Tags:
+</p>
+<div class="blog-header__tags-list">
+<a class="chip chip--outline-white" href="https://rubygarage.org/blog/tag/ecommerce">Ecommerce</a>
+<a class="chip chip--outline-white" href="https://rubygarage.org/blog/tag/startup">Startup</a>
+<a class="chip chip--outline-white" href="https://rubygarage.org/blog/tag/mvp">MVP</a>
+<a class="chip chip--outline-white" href="https://rubygarage.org/blog/tag/marketplace">Marketplace</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="sub-navigation blog-nav-wrap">
+<div class="container static">
+<div class="blog-nav offset-lg-1">
+<div class="blog-nav__content">
+<div class="d-none d-md-block">
+<ul class="d-flex flex-wrap">
+<li class="blog-tag blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog">
+All
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/tech-navigator">
+Tech Navigator
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/public">
+Public
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/insights">
+Insights
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/entrepreneurship">
+Entrepreneurship
+</a>
+</li>
+</ul>
+</div>
+<div class="blog-nav__mob-wrapper show-on-mobile">
+<div class="w-100 text-center">
+<div>
+<button aria-expanded="false" aria-haspopup="true" class="main-button main-button--transparent-black dropdown-toggle font-600" data-toggle="dropdown" type="button">
+All
+<i class="icon icon-triangle-down font-6 ml-10"></i>
+</button>
+<ul class="blog-nav__dropdown-menu dropdown-menu text-center bg-white" style="left: -272.1px; width: 1519px;">
+<li>
+<a class="blog-nav__main-link main-menu__link active" href="https://rubygarage.org/blog">
+All
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/tech-navigator">
+Tech Navigator
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/public">
+Public
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/insights">
+Insights
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/entrepreneurship">
+Entrepreneurship
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<button aria-label="search" class="blog-nav__open-search" data-target="#blog_search_modal" data-toggle="modal" type="button">
+<i class="blog-nav__open-search-icon"></i>
+</button>
+<button class="main-button-link move-icon-on-hover font-14 in-blue-220 hidden-md-down blog-subscr-btn d-none d-md-inline-block" data-target="#blog-subscribe" data-toggle="modal" type="button">
+Subscribe
+<i class="icon icon-arrow-right ml-10 font-8"></i>
+</button>
+</div>
+</div>
+</div>
+
+</div>
+<div class="blog-content-wrap blog-content-js">
+<div class="relative">
+<div class="article-sticky-left">
+<div class="article-sticky-left__inner">
+<a class="article-banner" href="https://rubygarage.org/resources/guide-to-build-a-b2b-marketpalce"><img width="300" height="600" class="article-banner__img" loading="lazy" alt="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/b2b_marketplace_banner.png">
+</a><div class="blog-social-fixed-wrap">
+<div class="blog-social-fixed">
+<p class="blog-social__title">
+Share
+</p>
+<div class="social-share-button" data-title="Share" data-img="" data-url="https://rubygarage.org/blog/how-to-build-a-b2b-website" data-desc="A collection of articles on startups, Agile best practices, web and mobile development, and UI/UX design." data-via="">
+<a rel="nofollow " data-site="facebook" class="ssb-icon ssb-facebook" title="Share to Facebook" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#"></a>
+<a rel="nofollow " data-site="twitter" class="ssb-icon ssb-twitter" title="Share to Twitter" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#"></a>
+<a rel="nofollow " data-site="linkedin" class="ssb-icon ssb-linkedin" title="Share to Linkedin" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="blog-content">
+<div class="container static">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-1">
+      <p>Due to the COVID-19 pandemic, <a href="https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/survey-uk-b2b-decision-maker-response-to-covid-19-crisis" target="_blank" rel="nofollow">up to 80%</a> of B2B decision-makers prefer digital self-service or remote interactions over traditional face-to-face interactions. In turn, sellers are trying to increase their online presence and digitize their businesses. This creates high demand for multi-vendor B2B ecommerce websites. If you want to know how to build a B2B ecommerce website of your own and take advantage of this tendency keep on reading.&nbsp;</p>
+<h2 id="article_title_0">How to create a B2B ecommerce website</h2>
+<p>Building a multi-vendor B2B ecommerce website entails many technical aspects you need to know about before you get started. In this article, we’ll provide you with a step-by-step guide on how to build a B2B ecommerce website with tips and insights. The first step you need to take is to choose your development approach.</p>
+<h2 id="article_title_1">Step 1. Choose your development approach&nbsp;</h2>
+<p>Before anything else, you need to decide how exactly to build a multi-vendor B2B website. Consider the following three cost- and time-efficient approaches:&nbsp;</p>
+<ul>
+<li>Subscribing to a software as a service (SaaS) solution&nbsp;</li>
+<li>Building your website on the basis of an open source platform</li>
+<li>Buying a white label product</li>
+</ul>
+<h3 id="article_title_2">Software as a service (SaaS)</h3>
+<p>You can subscribe to a cloud-based SaaS application to create your own B2B product. SaaS applications usually have a wide range of tools that allow you to create a decent multi-vendor website.&nbsp;</p>
+<h4>Advantages of the SaaS model</h4>
+<p>One of the most important benefits you get when using a SaaS product is time efficiency. With ready-made themes and templates, you’ll be able to create a fully functional website<strong> in a couple of months</strong>.</p>
+<p>With a SaaS solution, you don’t need to worry about maintaining your website, fixing bugs, and preventing downtime. Your SaaS provider will be responsible for your B2B website’s performance.&nbsp;</p>
+<h4>Disadvantages of the SaaS model</h4>
+<p>The most significant disadvantage of the SaaS model is that it’s <strong>impossible to create an absolutely unique and unusual design</strong> for your website. Since you’re using a prebuilt platform, you can’t adjust the user interface to meet your requirements.</p>
+<p>Additionally, as SaaS solutions are usually provided on a subscription basis, you’ll need to keep <strong>paying to use the service</strong>. Moreover, the price of your subscription probably won’t reflect whether you’re using all the features available or only a small range of them — you’ll pay <strong>the same fixed price</strong>.</p>
+<p>With SaaS products, you can also face a <strong>vendor lock-in problem</strong>. Migrating from a SaaS platform to another software solution can be a relatively daunting process. Switching SaaS platforms may result in incorrect migration and huge data losses. That’s why the chances are high that you’ll need to copy all the data manually to ensure it is transferred properly.&nbsp;</p>
+<h3 id="article_title_3">Open source solution</h3>
+<p>An open source solution helps you create your B2B ecommerce website using various templates and plugins.&nbsp;</p>
+<h4>Advantages of an open source solution</h4>
+<p>With the help of open source solutions, everyone <strong>without technical knowledge or coding skills </strong>can create a multi-vendor B2B ecommerce website. All you need to do is find suitable themes and plugins, pay for them if needed, install them, and start building your website.</p>
+<p>There are usually a huge number of developers around open source solutions who <strong>introduce new themes and plugins</strong> to make it possible to create diverse websites conveniently. They also regularly <strong>update and improve</strong> plugins and themes in order to attract more users and overcome their competitors.&nbsp;</p>
+<h4>Disadvantages of an open source solution&nbsp;</h4>
+<p>With an open source solution, you need to pay a lot of attention to the security of your website. Open source software is usually safe and secure. However, what puts your <strong>website’s security at risk </strong>are plugins. According to <a href="https://threatpost.com/threatlist-wordpress-vulnerabilities/140690/" target="_blank" rel="nofollow">Threatpost</a>, 98% of all WordPress vulnerabilities originate from plugins.</p>
+<p>The performance of a website based on open source software also <strong>hinges heavily on the performance of plugins</strong>. If one of your plugins doesn’t work correctly, your website may go down or some pages of your website may become corrupted.</p>
+<h3 id="article_title_4">White label solution&nbsp;</h3>
+<p>White label software contains a set of features typical for a particular type of software product. When you opt for a white label solution, you pay once and own the website’s code.&nbsp;</p>
+<h4>Advantages of a white label solution</h4>
+<p>Building a B2B ecommerce website based on a white label solution is much <strong>faster</strong> than building everything from scratch.&nbsp;</p>
+<p>White label software allows you to create a high-quality B2B ecommerce website <strong>without spending huge amounts</strong> on developers, QA specialists, project managers, and other specialists.</p>
+<p>Although a white label solution differs significantly from a custom website, it still offers a broad range of customization and branding options. A white label product allows you to create a <strong>one-of-a-kind design </strong>for your B2B ecommerce platform.</p>
+<p>Additionally, the software architecture of a white label solution allows a B2B ecommerce website to <strong>scale easily</strong> when it’s time to grow and expand the business.</p>
+<h4>Disadvantages of a white label solution</h4>
+<p>If you want to go beyond the features offered by a white label solution, development <strong>might take some time</strong>. Adding additional features to a white label solution is similar to taking a custom approach. When you pay for a white label product, you get a set of features that are already created and that work for all products of this kind (for instance, marketplaces all have catalogs, filters, search functionality, etc.). This is how you economize your resources. Yet if you need to add a custom feature such as bidding functionality that’s not present in the white label product, <strong>you’ll have to create it from scratch</strong>.</p>
+<aside class="related-article">
+  <div class="related-article__icon">
+    <img alt="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/related_article_icon-f83ef1474dc72617df5a8afd909133cf778b3a03e5ca159a58eecee44964c1c7.svg">
+  </div>
+  <p class="related-article__descr">
+    RubyGarage has great experience launching marketplaces. Check out how we built 
+    <a href="https://rubygarage.org/case-studies/campsited"> an online marketplace that connects camping park owners with fans of active leisure.</a>
+  </p>
+</aside>
+<p>Once you decide on how to develop a B2B ecommerce website, you need to think about the best way to launch your site.</p>
+<h2 id="article_title_5">Step 2. Decide on a soft or hard launch&nbsp;</h2>
+<p>When developing a B2B website, you need to choose between a soft and hard launch. Let’s see what each approach looks like.</p>
+<h3 id="article_title_6">Soft launch</h3>
+<p>A soft launch involves launching your product in a small market or a limited geographical area without running a massive advertising campaign. It helps you check if anything needs to be changed before releasing the product to the whole market.&nbsp;</p>
+<p>For instance, the founders of Upwork, an American freelancing marketplace, used their personal and professional networks to build an initial base of freelancers and companies. Only after testing the product among that user base did they expand their audience.&nbsp;</p>
+<p>If you wish to validate your business idea at a reasonable cost before investing your whole budget, you’d better start with a soft launch and apply a lean approach based on an MVP development strategy.&nbsp;</p>
+<p>The lean approach to software development helps you cut down on software development costs, effort, and time. The main idea of the lean approach is to build, measure, and learn. In other words, create the product, receive feedback, analyze that feedback, and make adjustments.&nbsp;</p>
+<p>One of the best ways to implement this approach is to launch an MVP with a limited number of essential features that will only cover potential customers’ urgent needs. This helps you validate a business idea, gain traction, and receive user feedback. After validation, you can proceed with implementing new features and scaling.</p>
+<p>A soft launch is the best choice if you:</p>
+<ul>
+<li>are just entering the market</li>
+<li>have a limited budget</li>
+<li>need to test the viability of your software product</li>
+<li>want to gather users’ feedback to know what to improve</li>
+<li>want to test product pricing&nbsp;</li>
+<li>need to A/B test your product’s features</li>
+<li>are hesitating about the amount of marketing you should undertake</li>
+</ul>
+<h3 id="article_title_7">Hard launch</h3>
+<p>In contrast, a hard launch involves a massive marketing campaign with the intent to reach your entire target audience at once. When opting for a hard launch, you need to invest a significant amount of money in advertising to attract attention to your company and your software product.&nbsp;</p>
+<p>A hard launch also requires a different approach to software development. Instead of creating an MVP, with a hard launch, you should create a fully fledged software product. Although you can still modify it in the future, your website should have all planned features in place for the hard launch.&nbsp;</p>
+<p>The hard launch approach is suitable when:</p>
+<ul>
+<li>you’re sure your team will deliver the product on time</li>
+<li>you have a detailed and solid marketing strategy</li>
+<li>you have a substantial budget</li>
+<li>you’ve fixed all critical bugs and solved major product performance issues</li>
+<li>your advertising campaign can create enough buzz to result in high demand for your product</li>
+</ul>
+<p>After you decide what approach to use when launching your website, let’s see how to bring in revenue after building a B2B ecommerce website.</p>
+<h2 id="article_title_8">Step 3. Pick a monetization strategy&nbsp;</h2>
+<p>Before you come up with your B2B ecommerce website’s features, you need to think of how you’re going to monetize your site, as this may influence your website’s functionality. Let’s look through the primary options for monetizing your B2B ecommerce website.&nbsp;</p>
+<h3 id="article_title_9">Feature-based subscriptions</h3>
+<p>A feature-based subscription strategy involves implementing two or more subscription plans with separate lists of features. You may have a basic plan with essential features and a Pro plan with an extended feature list at a higher cost, for example. Zageno, an online multi-vendor marketplace for life science products, uses this monetization strategy.</p>
+<figure>
+  <img alt="how to develop a b2b website" title="how to create a b2b website" srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3823/Zageno.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3827/Zageno_2x.png 2x" width="1604" height="730" loading="lazy" class="figure-img" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/Zageno.png">
+    <figcaption>
+      Zageno pricing
+    </figcaption>
+</figure>
+
+<h3 id="article_title_10">Utility-based subscriptions</h3>
+<p>A utility-based monetization strategy is tied to the number of resources a seller on your marketplace consumes. This strategy involves having several pricing tiers based on how many of your website’s services a customer uses. For example, you can charge a certain amount for creating three seller accounts within one vendor company. When a vendor adds a fourth seller account, the price of using your services automatically rises.&nbsp;</p>
+<h3 id="article_title_11">Freemium business model</h3>
+<p>A freemium monetization strategy suggests that your website has two plans: free and premium. With this strategy, the free plan includes only the features that cover the basic needs of running a business on your website, such as an admin dashboard, listings, search and filtering, etc. The premium plan includes all features to run a business comfortably and effectively, for instance, analytics and CRM features, live chat functionality, and reviews. The free plan is available to any user of your website, whereas the premium one is available to those who pay. Along with several other monetization strategies, Upwork uses the freemium business model.&nbsp;</p>
+<figure>
+  <img alt="how to build a b2b website" title="how to make a b2b website" srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3822/Upwork.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3826/Upwork_2x.png 2x" width="1100" height="838" loading="lazy" class="figure-img" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/Upwork.png">
+    <figcaption>
+      Upwork pricing
+    </figcaption>
+</figure>
+<h3 id="article_title_12">Ad-based business model</h3>
+<p>You can get money from partners who wish to place advertising on your website. This monetization strategy may be used as your main source of revenue or as an additional source.&nbsp;</p>
+<h3 id="article_title_13">Time-based subscriptions</h3>
+<p>You can offer users to pay for your services monthly, quarterly, biannually, or annually. Usually, short-term subscriptions are less cost-efficient for users than long-term ones. An example of a marketplace that uses this monetization strategy is Indiamart – an Indian ecommerce company that provides B2B, B2C, and C2C sales services.</p>
+<figure>
+  <img alt="how to build a multi-vendor b2b website" title="how to create a b2b ecommerce website" srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3821/Indiamart.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3825/Indiamart_2x.png 2x" width="1195" height="466" loading="lazy" class="figure-img" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/Indiamart.png">
+    <figcaption>
+      Indiamart pricing
+    </figcaption>
+</figure>
+<h3 id="article_title_14">Percentage-based fees</h3>
+<p>Charging percentage-based fees is one of the most widely used ecommerce monetization strategies. With this model, your website makes money when users of your website do by taking a percentage of the sales vendors make on your platform. Amazon Business uses percentage-based fees and a monthly subscription to generate revenue.</p>
+<figure>
+  <img alt="how to start a b2b website" title="how to build a b2b ecommerce website" srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3820/Amazon_business.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/article_image/file/3824/Amazon_business_2x.png 2x" width="757" height="401" loading="lazy" class="figure-img" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/Amazon_business.png">
+    <figcaption>
+      Amazon Business pricing
+    </figcaption>
+</figure>
+<h3 id="article_title_15">Listing fee business model</h3>
+<p>With listing-based monetization, the fees vendors pay for using your platform depends on the number of goods or services they offer. For instance, you can charge a set fee for placing up to 100 listings on your B2B ecommerce website per month. When a vendor places more than 100 listings in a month, the cost of using your services automatically goes up. The listing fee business model suits marketplaces with huge bases of buyers, since these marketplaces are attractive and profitable for sellers and vendors.&nbsp;</p>
+<p>Now that you’re aware of the monetization models, you can start selecting features for your MVP or fully fledged product.</p>
+<h2 id="article_title_16">Step 4. Select the list of MVP features</h2>
+<p>If you believe a soft launch is the path you want for starting your marketplace, you should come up with a list of features for your MVP. Usually, multi-vendor websites support three types of users: admins, vendors, and buyers. The next step is to decide what features you need to implement for each kind of user. Here, we review the most common features of B2B ecommerce websites.</p>
+<h4>User and company profiles</h4>
+<p>Profiles are required for vendors and buyers on B2B ecommerce websites for various purposes.&nbsp;</p>
+<ul>
+<li>Vendors can add names, job titles, and profile photos to their personal profiles. They can also create company profiles to provide more information about companies as well as their goods and services.&nbsp;</li>
+<li>For buyers, personal accounts are necessary to set up delivery addresses and payment methods and save a history of purchased products or services. Vendors’ personal and company profiles are helpful for buyers when making buying decisions. Since B2B marketplaces mostly rely on company to company interactions, it’s beneficial for buyers to read information about the suppliers of goods and services.</li>
+</ul>
+<h4>Listings</h4>
+<p>Listings are necessary for vendors to place their products and services on your website and offer them to buyers.&nbsp;</p>
+<h4>Search tools</h4>
+<p>Search and filtering is required for all users of your B2B ecommerce website.</p>
+<ul>
+<li>Admins need to search for vendors, buyers, goods, and website settings.&nbsp;</li>
+<li>Vendors need to search and filter to find goods and shop settings.&nbsp;</li>
+<li>Buyers need to search for goods and vendors.</li>
+</ul>
+<h4>Inventory availability and order management</h4>
+<p>Vendors and sellers require a tool that helps them monitor the availability of their products and services. They also need a dashboard that allows for managing their shops, dealing with orders, and tracking order statuses.&nbsp;</p>
+<h4>Online payments</h4>
+<p>Payments are vital for every user of your B2B ecommerce website.&nbsp;</p>
+<ul>
+<li>A reliable payment system is required so a website’s owner can monetize the site.</li>
+<li>A stable and solid online payment system means timely payment for products and services for vendors. A payment system also allows vendors to efficiently process refunds.</li>
+<li>For buyers, a reliable online payment gateway is the easiest and most secure way to pay for items.&nbsp;</li>
+</ul>
+<h4>Reviews</h4>
+<p>The possibility to leave reviews lets buyers share their opinions on vendors’ products and services and allows vendors to assess their relationships with buyers.</p>
+<ul>
+<li>Positive reviews help vendors boost their sales and gain buyers’ trust, whereas negative reviews help them find aspects of their products or services that need to be improved. Also, vendors can leave reviews about buyers to inform other vendors about possible issues such as an unwillingness to pay for orders.</li>
+<li>Reviews are a valuable tool that help buyers make informed purchasing decisions and allow vendors to see if buyers are reliable.&nbsp;</li>
+</ul>
+<h4>Admin tools</h4>
+<p>An admin dashboard is required for any B2B ecommerce website to provide website owners or admins with a space to effectively configure and manage the marketplace.</p>
+<p>The feature set for admins should definitely include a way to manage content on the platform: users, listings, reviews, payments, refunds – everything your users are going to deal with should be configurable. Admins should be able to control things from behind the scenes for the sake of convenience. If there are issues with a vendor’s listings, for example, admins should be able to react quickly and fix them.&nbsp;</p>
+<h4>Mapping and locations</h4>
+<p>Whether you should implement mapping and location features in your B2B ecommerce website will depend on the specifics of your niche. B2B websites like GorillaSpace – a marketplace that helps businesses find office space – require mapping and location features.&nbsp;</p>
+<p>On GorillaSpace:</p>
+<ul>
+<li>Website owners and admins need access to map configurations and settings to adjust the mapping configurations to their needs.</li>
+<li>Vendors need to specify locations of available offices, work booths, and meeting rooms to let renters find spaces in optimal locations.</li>
+<li>Renters should be able to select preferred locations on the map to filter search results.</li>
+</ul>
+<h2 id="article_title_17">Step 5. Consider adding advanced features</h2>
+<p>If you wish to scale your MVP or opt for a hard launch instead of a soft launch, consider adding advanced features alongside those mentioned above. Here, we enumerate nice-to-have features you can add to your B2B website not only to satisfy your users’ basic needs but to excite your users.</p>
+<h4>Price negotiation</h4>
+<p>You can let buyers bargain for vendors’ items and make price negotiation one of your killer features. You may think this will result in lower revenue for vendors. However, not all buyers negotiate the price even when given the opportunity.&nbsp;</p>
+<h4>User identity verification&nbsp;</h4>
+<p>To improve your website’s security and establish credibility, you can verify users’ identities. For example, you can use AI-powered digital ID verification to make sure vendors and buyers are who they say they are.&nbsp;</p>
+<h4>Contracts and NDA forms</h4>
+<p>You can make it easier for businesses to sign contracts and non-disclosure agreements (NDAs) by making templates and forms available directly on your website. Such templates and forms will help businesses to start cooperating right away without any additional tools or programs.&nbsp;</p>
+<h4>CRM tools for vendors</h4>
+<p>Let your vendors optimize their sales with CRM features. For instance, you can create an online support center to help vendors manage their interactions with customers right on your marketplace.&nbsp;</p>
+<h4>Video and live chat</h4>
+<p>The COVID-19 pandemic has resulted in a massive digital shift in B2B sales. According to a McKinsey report, live chat is now the <a href="https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/how-b2b-sales-have-changed-during-covid-19" target="_blank" rel="nofollow">top channel for researching suppliers</a>. As in-person meetings have been relegated to second place, you can provide your vendors with video and live chat features to interact with potential buyers and close sales.&nbsp;</p>
+<h4>Mobile app</h4>
+<p>Another effect of the COVID-19 pandemic on the B2B market has been a <a href="https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/how-b2b-sales-have-changed-during-covid-19" target="_blank" rel="nofollow">250% increase</a> in mobile app ordering. To provide buyers with a high-level shopping experience, you can consider creating your own marketplace mobile apps for iOS and Android.</p>
+<h2 id="article_title_18">Conclusion</h2>
+<p>Dealing with all aspects of creating a B2B ecommerce website on your own may be daunting. But it becomes a lot easier with a dedicated team that’s always there to help.&nbsp;</p>
+<aside class="related-article">
+  <div class="related-article__icon">
+    <img alt="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/related_article_icon-f83ef1474dc72617df5a8afd909133cf778b3a03e5ca159a58eecee44964c1c7.svg">
+  </div>
+  <p class="related-article__descr">
+    Want to launch a multi-vendor B2B ecommerce website? Check out how
+    <a href="https://rubygarage.org/solutions/market-age-b2b-multi-vendor-marketplace-solution">MarketAge can help you do it in a streamlined and cost-efficient manner. </a>
+  </p>
+</aside>
+
+    </div>
+
+    <div class="col-lg-3 article-inner-nav-wrap">
+      <div class="article-inner-nav" id="article_inner_navbar">
+        <span class="article-inner-nav__heading">
+          CONTENTS
+        </span>
+        <nav>
+          <ul class="nav nav-scrollable" id="scroll-area-js" style="overflow-y: scroll; max-height: 558.2px;">
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_0">How to create a B2B ecommerce website</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_1">Step 1. Choose your development approach&nbsp;</a>
+<ul class="nav">
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_2">Software as a service (SaaS)</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_3">Open source solution</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_4">White label solution&nbsp;</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_5">Step 2. Decide on a soft or hard launch&nbsp;</a>
+<ul class="nav">
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_6">Soft launch</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_7">Hard launch</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_8">Step 3. Pick a monetization strategy&nbsp;</a>
+<ul class="nav">
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_9">Feature-based subscriptions</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_10">Utility-based subscriptions</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_11">Freemium business model</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_12">Ad-based business model</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_13">Time-based subscriptions</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_14">Percentage-based fees</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_15">Listing fee business model</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_16">Step 4. Select the list of MVP features</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_17">Step 5. Consider adding advanced features</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#article_title_18">Conclusion</a>
+</li>
+</ul>
+        </nav>
+        <div class="sctoll-nav-btn-overlay up hidden" id="scroll-up-js" style="display: none;">
+          <button class="sctoll-nav-btn" type="button">
+            <i class="icon icon-arrow-up"></i>
+          </button>
+        </div>
+        <div class="sctoll-nav-btn-overlay down hidden" id="scroll-down-js" style="display: none;">
+          <button class="sctoll-nav-btn scroll-btn" type="button">
+            <i class="icon icon-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<h2 class="mb-16 heading heading--size-lg-big">
+FAQ
+</h2>
+<ol class="ol-reset" id="accordion">
+<li class="accordion-item accordion-item--gray">
+<button class="accordion-item__header" data-target="#faq-192" data-toggle="collapse">
+<h3 class="accordion-item__header-title">
+How can I build a B2B ecommerce website?
+</h3>
+<i class="accordion-item__header-icon icon icon-plus"></i>
+<i class="accordion-item__header-icon icon icon-minus"></i>
+</button>
+<div class="collapse" data-parent="#accordion" id="faq-192">
+<div class="accordion-item__body">
+<div class="accordion-item__body-descr">
+<p>Consider the following three cost- and time-efficient development approaches:&nbsp;</p>
+<ul>
+<li>Subscribe to a software as a service (SaaS) solution&nbsp;</li>
+<li>Build your website on an open source platform</li>
+<li>Buy white-label software</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="accordion-item accordion-item--gray">
+<button class="accordion-item__header" data-target="#faq-193" data-toggle="collapse">
+<h3 class="accordion-item__header-title">
+How can I monetize my B2B marketplace website?
+</h3>
+<i class="accordion-item__header-icon icon icon-plus"></i>
+<i class="accordion-item__header-icon icon icon-minus"></i>
+</button>
+<div class="collapse" data-parent="#accordion" id="faq-193">
+<div class="accordion-item__body">
+<div class="accordion-item__body-descr">
+<p>To monetize your B2B website, you can use one or several of the following monetization strategies:</p>
+<ul>
+<li>Feature-based subscriptions</li>
+<li>Utility-based subscriptions</li>
+<li>Freemium business model</li>
+<li>Ad-based business model</li>
+<li>Time-based subscriptions</li>
+<li>Percentage-based fees</li>
+<li>Listing fees</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="accordion-item accordion-item--gray">
+<button class="accordion-item__header" data-target="#faq-194" data-toggle="collapse">
+<h3 class="accordion-item__header-title">
+How can I launch a B2B marketplace website?
+</h3>
+<i class="accordion-item__header-icon icon icon-plus"></i>
+<i class="accordion-item__header-icon icon icon-minus"></i>
+</button>
+<div class="collapse" data-parent="#accordion" id="faq-194">
+<div class="accordion-item__body">
+<div class="accordion-item__body-descr">
+<p>There are two major approaches to launching a B2B marketplace website: a soft launch and a hard launch.&nbsp;</p>
+<p>A soft launch means launching your product in a small market or a limited geographical area without running a massive advertising campaign in order to check if anything needs to be changed before releasing the product to the whole market.</p>
+<p>In contrast, a hard launch involves a massive marketing campaign with the intent to reach your entire target audience at once.&nbsp;</p>
+<p><br>If you’re still not sure how you should implement your B2B marketplace idea and launch your website, <a href="https://rubygarage.org/contacts">contact RubyGarage</a> and we’ll help you figure it out.</p>
+</div>
+</div>
+</div>
+</li>
+
+</ol>
+</div>
+</div>
+</div>
+<ngx-json-ld _ngcontent-c31="" class="ng-star-inserted">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How can I launch a B2B marketplace website?","acceptedAnswer":{"@type":"Answer","text":"\u003cp\u003eThere are two major approaches to launching a B2B marketplace website: a soft launch and a hard launch.\u0026nbsp;\u003c/p\u003e\r\n\u003cp\u003eA soft launch means launching your product in a small market or a limited geographical area without running a massive advertising campaign in order to check if anything needs to be changed before releasing the product to the whole market.\u003c/p\u003e\r\n\u003cp\u003eIn contrast, a hard launch involves a massive marketing campaign with the intent to reach your entire target audience at once.\u0026nbsp;\u003c/p\u003e\r\n\u003cp\u003e\u003cbr /\u003eIf you\u0026rsquo;re still not sure how you should implement your B2B marketplace idea and launch your website, \u003ca href=\"https://rubygarage.org/contacts\"\u003econtact RubyGarage\u003c/a\u003e and we\u0026rsquo;ll help you figure it out.\u003c/p\u003e"}},{"@type":"Question","name":"How can I monetize my B2B marketplace website?","acceptedAnswer":{"@type":"Answer","text":"\u003cp\u003eTo monetize your B2B website, you can use one or several of the following monetization strategies:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eFeature-based subscriptions\u003c/li\u003e\r\n\u003cli\u003eUtility-based subscriptions\u003c/li\u003e\r\n\u003cli\u003eFreemium business model\u003c/li\u003e\r\n\u003cli\u003eAd-based business model\u003c/li\u003e\r\n\u003cli\u003eTime-based subscriptions\u003c/li\u003e\r\n\u003cli\u003ePercentage-based fees\u003c/li\u003e\r\n\u003cli\u003eListing fees\u003c/li\u003e\r\n\u003c/ul\u003e"}},{"@type":"Question","name":"How can I build a B2B ecommerce website?","acceptedAnswer":{"@type":"Answer","text":"\u003cp\u003eConsider the following three cost- and time-efficient development approaches:\u0026nbsp;\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eSubscribe to a software as a service (SaaS) solution\u0026nbsp;\u003c/li\u003e\r\n\u003cli\u003eBuild your website on an open source platform\u003c/li\u003e\r\n\u003cli\u003eBuy white-label software\u003c/li\u003e\r\n\u003c/ul\u003e"}}]}
+
+
+</script>
+</ngx-json-ld>
+<section>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<div class="divider"></div>
+</div>
+</div>
+</div>
+<div class="blog-tags">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<p class="blog-tags__label">
+Tags:
+</p>
+<div class="blog-tags__list">
+<a class="chip chip--blue-white" href="https://rubygarage.org/blog/tag/ecommerce">Ecommerce</a>
+<a class="chip chip--blue-white" href="https://rubygarage.org/blog/tag/startup">Startup</a>
+<a class="chip chip--blue-white" href="https://rubygarage.org/blog/tag/mvp">MVP</a>
+<a class="chip chip--blue-white" href="https://rubygarage.org/blog/tag/marketplace">Marketplace</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<div class="blog-authors">
+<p class="font-14 font-300 text-uppercase opacity-06 lh-1 pt-0 mb-30">
+Authors:
+</p>
+<div class="row">
+<div class="col-sm-6">
+<div class="d-flex align-items-center mb-20">
+<img srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/75/primary_mini_magick20210929-1-rsm4vb.jpg 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/75/secondary_mini_magick20210929-1-rsm4vb.jpg 2x" class="blog-authors__img round-img round-img--md" alt="Yana S." width="50" height="50" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_mini_magick20210929-1-rsm4vb.jpg">
+
+<div>
+<p class="font-17 lh-1 mb-10 pt-0">
+Yana S.
+</p>
+<p class="font-14 lh-1 opacity-05 mb-0 pt-0">Copywriter</p>
+</div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="d-flex align-items-center mb-20">
+<img srcset="https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/77/primary_mini_magick20210929-1-11y7jvo.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/uploads/blogauthor/photo/77/secondary_mini_magick20210929-1-11y7jvo.png 2x" class="blog-authors__img round-img round-img--md" alt="Kirill Z." width="50" height="50" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_mini_magick20210929-1-11y7jvo.png">
+
+<div>
+<p class="font-17 lh-1 mb-10 pt-0">
+Kirill Z.
+</p>
+<p class="font-14 lh-1 opacity-05 mb-0 pt-0">Business Analyst</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container text-center mb-40">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<div class="pt-20">
+<p class="blog-social__title mb-40" id="rating_message">
+Rate this article!
+</p>
+<div class="article-rating">
+<div class="article-rating__pane">
+<div class="article-rating__pane-slot">
+<button class="article-rating__action" id="nay_btn" type="button">
+<span class="article-rating__action-icon">
+🙁
+</span>
+</button>
+<div class="article-rating__action-name">
+Nay
+</div>
+</div>
+<div class="article-rating__pane-slot">
+<button class="article-rating__action" id="soso_btn" type="button">
+<span class="article-rating__action-icon">
+😐
+</span>
+</button>
+<div class="article-rating__action-name">
+So-so
+</div>
+</div>
+<div class="article-rating__pane-slot">
+<button class="article-rating__action" id="not_bad_btn" type="button">
+<span class="article-rating__action-icon">
+😴
+</span>
+</button>
+<div class="article-rating__action-name">
+Not bad
+</div>
+</div>
+<div class="article-rating__pane-slot">
+<button class="article-rating__action" id="good_btn" type="button">
+<span class="article-rating__action-icon">
+🙂
+</span>
+</button>
+<div class="article-rating__action-name">
+Good
+</div>
+</div>
+<div class="article-rating__pane-slot">
+<button class="article-rating__action" id="wow_btn" type="button">
+<span class="article-rating__action-icon">
+😍
+</span>
+</button>
+<div class="article-rating__action-name">
+Wow
+</div>
+</div>
+</div>
+<span class="article-rating__summary" id="rating_summary">
+12 ratings, average 4.92 out of 5
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container hidden-xxl-up text-center">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<div class="divider mb-20"></div>
+<a class="article-banner article-banner--bottom" href="https://rubygarage.org/resources/guide-to-build-a-b2b-marketpalce"><img class="article-banner__img" alt="" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/b2b_marketplace_banner.png">
+</a></div>
+</div>
+</div>
+<div class="container text-center mb-40">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<div class="pt-20">
+<p class="blog-social__title mb-40">
+Share article with
+</p>
+<div class="mb-10 social-counter">
+<div class="social-share-button" data-title="Share" data-img="" data-url="https://rubygarage.org/blog/how-to-build-a-b2b-website" data-desc="A collection of articles on startups, Agile best practices, web and mobile development, and UI/UX design." data-via="">
+<a rel="nofollow " data-site="facebook" class="ssb-icon ssb-facebook" title="Share to Facebook" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#"></a>
+<a rel="nofollow " data-site="twitter" class="ssb-icon ssb-twitter" title="Share to Twitter" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#"></a>
+<a rel="nofollow " data-site="linkedin" class="ssb-icon ssb-linkedin" title="Share to Linkedin" href="https://rubygarage.org/blog/how-to-build-a-b2b-website#"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container mb-50">
+<div class="row">
+<div class="col-lg-8 offset-lg-1">
+<a name="comments"></a>
+<div class="comments-header">
+<span class="comments-header__title">
+Comments
+<span class="opacity-06 ls-1">
+(0)
+</span>
+</span>
+<div class="hidden-md-up">
+<button class="main-button main-button--grey main-button--sm sign-in-comments-js" data-target="#modal-sign-in" data-toggle="modal" type="button">
+Sign in
+</button>
+</div>
+<div class="hidden-sm-down">
+<span class="font-12 opacity-05 mr-10">
+to leave a comment
+</span>
+<button class="main-button main-button--grey main-button--sm sign-in-comments-js" data-target="#modal-sign-in" data-toggle="modal" type="button">
+Sign in
+</button>
+</div>
+</div>
+<div class="modal modal--sign-in" id="modal-sign-in">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="text-right modal-content-close-js mb-10">
+<button aria-label="Close" class="modal-close close icon icon-cross" data-dismiss="modal" type="button"></button>
+</div>
+<div class="row text-center">
+<div class="col-md-8 offset-md-2">
+<p class="font-24 font-700 mb-10">
+RubyGarage Blog
+</p>
+<p class="font-15 opacity-06 mb-30">
+Sign In to leave comments and connect with other readers
+</p>
+<div class="mb-15">
+<a class="social-button social-button--twitter" rel="nofollow" data-method="post" href="https://rubygarage.org/users/auth/twitter"><i class="icon icon-twitter font-13"></i>
+Sign in with Twitter
+</a></div>
+<div class="mb-15">
+<a class="social-button social-button--facebook" rel="nofollow" data-method="post" href="https://rubygarage.org/users/auth/facebook"><i class="icon icon-facebook font-13"></i>
+Sign in with Facebook
+</a></div>
+<div class="mb-15">
+<a class="social-button social-button--linkedin" rel="nofollow" data-method="post" href="https://rubygarage.org/users/auth/linkedin"><i class="icon icon-linkedin font-13"></i>
+Sign in with Linkedin
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="comments" id="comments">
+<div class="text-center pt-30">
+<p class="opacity-05 mb-30">
+There are no comments yet
+</p>
+<div class="main-button main-button--transparent-blue" data-target="#modal-sign-in" data-toggle="modal">
+Leave comment
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="hidden-xs-down">
+<div class="divider"></div>
+<div class="blog-subscr">
+<div class="container">
+<div class="row">
+<div class="col-12 mb-20">
+<span class="icon icon-launch blog-subscr__icon"></span>
+</div>
+<div class="col-12 mb-30">
+<p class="blog-subscr__title">
+<span class="font-700">Subscribe</span>
+via email and know it all first!
+</p>
+</div>
+<div class="col-12">
+<button class="main-button main-button--violet-black move-icon-on-hover mb-20" data-target="#blog-subscribe" data-toggle="modal" type="button">
+Subscribe on our news
+<span class="icon icon-arrow-right-short font-8 ml-23"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="blog-recommended">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="blog-recommended__title">
+Recommended Articles
+</div>
+<div class="row">
+<div class="mb-20 col-md-4">
+<div class="card-blog card-bg--violet">
+<a class="card-blog__img-wrap relative pt-30" aria-label="Biggest Marketplace Problems and Ideas on How to Solve Them" href="https://rubygarage.org/blog/problems-with-marketplaces"><div class="card-blog__wrap--blackout card-bg--violet"></div>
+<img class="card-blog__img" loading="lazy" alt="Biggest Marketplace Problems and Ideas on How to Solve Them" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_7_Problems_with_Marketplace_and_How_to_Overcome_Them-02.png">
+</a><div class="card-blog__wrap">
+<div class="card-blog__title">
+<a class="article-record-534" href="https://rubygarage.org/blog/problems-with-marketplaces">Biggest Marketplace Problems and Ideas on How to Solve Them</a>
+</div>
+<div class="card-blog__tags">
+<ul class="clearfix mb-10">
+<li class="card-blog__list-item">
+<a href="https://rubygarage.org/blog/category/entrepreneurship">Entrepreneurship</a>
+</li>
+<li class="card-blog__list-item">
+5731 views
+</li>
+<li class="card-blog__list-item">
+15 min
+</li>
+</ul>
+<a aria-label="Biggest Marketplace Problems and Ideas on How to Solve Them" class="card-blog__link" href="https://rubygarage.org/blog/problems-with-marketplaces">
+<i class="icon icon-arrow-right-thin"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="mb-20 col-md-4">
+<div class="card-blog card-bg--blue">
+<a class="card-blog__img-wrap relative pt-30" aria-label="How to Start a B2B Marketplace: Five Steps You Should Take" href="https://rubygarage.org/blog/how-to-start-a-b2b-marketplace"><div class="card-blog__wrap--blackout card-bg--blue"></div>
+<img class="card-blog__img" loading="lazy" alt="How to Start a B2B Marketplace: Five Steps You Should Take" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_What_s_a_B2B_marketplace_Header_2.png">
+</a><div class="card-blog__wrap">
+<div class="card-blog__title">
+<a class="article-record-536" href="https://rubygarage.org/blog/how-to-start-a-b2b-marketplace">How to Start a B2B Marketplace: Five Steps You Should Take</a>
+</div>
+<div class="card-blog__tags">
+<ul class="clearfix mb-10">
+<li class="card-blog__list-item">
+<a href="https://rubygarage.org/blog/category/entrepreneurship">Entrepreneurship</a>
+</li>
+<li class="card-blog__list-item">
+2406 views
+</li>
+<li class="card-blog__list-item">
+12 min
+</li>
+</ul>
+<a aria-label="How to Start a B2B Marketplace: Five Steps You Should Take" class="card-blog__link" href="https://rubygarage.org/blog/how-to-start-a-b2b-marketplace">
+<i class="icon icon-arrow-right-thin"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="mb-20 col-md-4">
+<div class="card-blog card-bg--violet">
+<a class="card-blog__img-wrap relative pt-30" aria-label="The 10 Most Prominent B2B Marketplace Examples " href="https://rubygarage.org/blog/b2b-ecommerce-marketplaces"><div class="card-blog__wrap--blackout card-bg--violet"></div>
+<img class="card-blog__img" loading="lazy" alt="The 10 Most Prominent B2B Marketplace Examples " src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/primary_The_10_Most_Prominent_B2B_Multi_Vendor_Platform_Examples-02.png">
+</a><div class="card-blog__wrap">
+<div class="card-blog__title">
+<a class="article-record-537" href="https://rubygarage.org/blog/b2b-ecommerce-marketplaces">The 10 Most Prominent B2B Marketplace Examples </a>
+</div>
+<div class="card-blog__tags">
+<ul class="clearfix mb-10">
+<li class="card-blog__list-item">
+<a href="https://rubygarage.org/blog/category/entrepreneurship">Entrepreneurship</a>
+</li>
+<li class="card-blog__list-item">
+9515 views
+</li>
+<li class="card-blog__list-item">
+11 min
+</li>
+</ul>
+<a aria-label="The 10 Most Prominent B2B Marketplace Examples " class="card-blog__link" href="https://rubygarage.org/blog/b2b-ecommerce-marketplaces">
+<i class="icon icon-arrow-right-thin"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="scroll-up hidden-lg-up" style="display: none;">
+<i class="icon icon-arrow-up"></i>
+</div>
+</div>
+<script src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/social_buttons-55f309d88d530c571665.js.download"></script>
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":"https://rubygarage.org/blog/how-to-build-a-b2b-website","headline":"How to Build a B2B Website Like Alibaba or Amazon Business","description":"Discover a step-by-step guide on how to build a B2B ecommerce website. Find out what to keep in mind when launching a B2B site to join a market that’s estimated to be worth over $20 trillion by 2027.","author":[{"@type":"Person","name":"Yana S."},{"@type":"Person","name":"Kirill Z."}],"publisher":{"@type":"Organization","name":"RubyGarage","logo":{"@type":"ImageObject","url":"https://rubygarage.org/assets/logo_128x128-17ce74fc40d711d3cff5e1cd3b1c729103120d9c07dfaa0edf03cc126b88788b.png"}},"image":{"@type":"ImageObject","url":"https://d3smn0u2zr7yfv.cloudfront.net/uploads/article/main_image/538/primary_main-image.png","width":540},"datePublished":"2020-11-20T17:00:00.000+02:00","dateModified":"2021-07-27T12:09:44.130+03:00","aggregateRating":{"@type":"AggregateRating","ratingValue":4.92,"reviewCount":12}}
+
+</script>
+
+</div>
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-12 col-md-10 offset-md-1">
+<div class="footer__social">
+<a aria-label="clutch" class="icon-clutch icon footer__social-link" href="https://clutch.co/profile/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="github" class="icon-github icon footer__social-link" href="https://github.com/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="twitter" class="icon-twitter icon footer__social-link" href="https://twitter.com/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="facebook" class="icon-facebook icon footer__social-link" href="https://www.facebook.com/RubyGarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="linkedin" class="icon-linkedin icon footer__social-link" href="https://www.linkedin.com/company/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="dribbble" class="icon-dribbble icon footer__social-link" href="https://dribbble.com/ugem" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="behance" class="icon-behance icon footer__social-link" href="https://www.behance.net/ugemdesign" rel="noopener noreferrer" target="_blank"></a>
+</div>
+<div class="divider"></div>
+</div>
+</div>
+<div class="row footer-inner" itemscope="" itemtype="http://schema.org/PostalAddress">
+<div class="col-12 col-md-4 offset-md-1 col-lg-3 mb-40">
+<a href="https://rubygarage.org/">
+<img alt="RubyGarage" width="180" height="56" class="footer__logo" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/footer_logo-e1a93e90365ae719895ec165930ec1c4a385ad75adb9c36811ebf37464a61c3c.svg">
+</a>
+<div class="footer__contacts">
+<div class="footer__contacts-item">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" fill="#f0f0f0" r="11"></circle>
+<g fill="#d80027">
+<path d="M10.52 11H22c0-1-.13-1.95-.38-2.87h-11.1V11zM10.52 5.26h9.87a11.06 11.06 0 0 0-2.54-2.87h-7.33v2.87zM11 22c2.59 0 4.97-.9 6.85-2.4H4.15C6.03 21.1 8.41 22 11 22zM1.61 16.74H20.4c.54-.88.96-1.85 1.23-2.87H.38c.27 1.02.7 1.99 1.23 2.87z"></path>
+<path d="M5.1 1.72h1l-.93.68.35 1.1-.93-.69-.93.68.3-.95c-.82.69-1.54 1.49-2.13 2.38h.32l-.6.43-.26.47.29.88-.53-.39c-.13.28-.25.56-.36.86l.31.96h1.15l-.93.67.36 1.1-.94-.68-.55.4C.03 10.09 0 10.55 0 11h11V0C8.83 0 6.8.63 5.1 1.72zm.42 8.18l-.93-.68-.93.68L4 8.8l-.93-.67h1.15l.36-1.1.36 1.1H6.1l-.93.67.35 1.1zm-.35-4.3l.35 1.1-.93-.68-.93.68L4 5.6l-.93-.68h1.15l.36-1.1.36 1.1H6.1l-.93.68zm4.3 4.3l-.94-.68-.93.68.36-1.1-.93-.67h1.15l.35-1.1.36 1.1h1.15l-.93.67.36 1.1zM9.1 5.6l.36 1.1-.94-.68-.93.68.36-1.1-.93-.68h1.15l.35-1.1.36 1.1h1.15l-.93.68zm0-3.2l.36 1.1-.94-.69-.93.68.36-1.1-.93-.67h1.15l.35-1.1.36 1.1h1.15l-.93.68z" fill="#0052b4"></path>
+</g>
+</svg>
+<a class="footer__contacts-item-link" href="tel:+19299991970">+1 (929) 999-19-70</a>
+</div>
+<div class="footer__contacts-item">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" fill="#f0f0f0" r="11"></circle>
+<g fill="#0052b4">
+<path d="M2.27 4.3a10.96 10.96 0 0 0-1.9 3.83H6.1L2.27 4.3zM21.62 8.13c-.38-1.4-1.03-2.7-1.9-3.83L15.9 8.13h5.72zM.38 13.87c.38 1.4 1.03 2.7 1.9 3.83l3.82-3.83H.38zM17.7 2.27a10.96 10.96 0 0 0-3.83-1.9V6.1l3.83-3.83zM4.3 19.73c1.13.86 2.42 1.51 3.83 1.9V15.9L4.3 19.73zM8.13.38c-1.4.38-2.7 1.03-3.83 1.9L8.13 6.1V.38zM13.87 21.62c1.4-.38 2.7-1.03 3.83-1.9l-3.83-3.82v5.72zM15.9 13.87l3.83 3.83a10.96 10.96 0 0 0 1.9-3.83H15.9z"></path>
+</g>
+<g fill="#d80027">
+<path d="M21.9 9.57h-9.47V.09a11.11 11.11 0 0 0-2.86 0v9.48H.09a11.11 11.11 0 0 0 0 2.86h9.48v9.48a11.1 11.1 0 0 0 2.86 0v-9.48h9.48a11.1 11.1 0 0 0 0-2.86z"></path>
+<path d="M13.87 13.87l4.9 4.9c.23-.22.45-.45.65-.7l-4.2-4.2h-1.35zM8.13 13.87l-4.9 4.9c.22.23.45.45.7.65l4.2-4.2v-1.35zM8.13 8.13l-4.9-4.9c-.23.22-.45.45-.65.7l4.2 4.2h1.35zM13.87 8.13l4.9-4.9c-.22-.23-.45-.45-.7-.65l-4.2 4.2v1.35z"></path>
+</g>
+</svg>
+<a class="footer__contacts-item-link" href="tel:+442080684988">+44 (208) 068-49-88</a>
+</div>
+<div class="footer__contacts-item">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" fill="#ffda44" r="11"></circle>
+<path d="M0 11a11 11 0 0 1 22 0" fill="#338af3"></path>
+</svg>
+<a class="footer__contacts-item-link" href="tel:+380993960649">+380 (99) 396-06-49</a>
+</div>
+</div>
+<p class="footer__title">
+Featured in
+</p>
+<ul>
+<li class="mb-20">
+<picture>
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/Forbes_logo-1da5f95d36055c2086b3c8bf7ff08094ac2cfe558391e491f36824b61fabb24d.webp 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/Forbes_logo_2x-2f0621b885ea75b7a857b414d56366f4e60fc1c2c2198e1e9f33185d23414869.webp 2x" type="image/webp">
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/Forbes_logo-4c8d566b1cc8c80ed48de0a86d0d1a3a412d31104289fda1256db7b1c56982ee.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/Forbes_logo_2x-f4895c502c7a101eb4e72085397f5da8a040ed248e635b7272393c5a1711310b.png 2x" type="image/png">
+<img alt="Forbes Logo" width="93" height="24" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/Forbes_logo-4c8d566b1cc8c80ed48de0a86d0d1a3a412d31104289fda1256db7b1c56982ee.png">
+</picture>
+</li>
+<li class="mb-20">
+<picture>
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/Inc_logo-9b99a73266b9e7fdce87a61776a13b676017f96d5da94ec0d20c3abe35af7aab.webp 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/Inc_logo_2x-4613bdd9c2772324bf5d18d317e0c5b163977a63cd909d8dc59942ca598704b3.webp 2x" type="image/webp">
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/Inc_logo-389aa9b54072be8edd8412ab580ad2748f258bf71f3550a824ebaa876c7f6a5d.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/Inc_logo_2x-b998fd3dcb44e82df2ece70c8004e4550ba91ee978e4dd22eb6e69b040c8f7f7.png 2x" type="image/png">
+<img alt="Forbes Logo" width="56" height="19" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/Inc_logo-389aa9b54072be8edd8412ab580ad2748f258bf71f3550a824ebaa876c7f6a5d.png">
+</picture>
+</li>
+<li class="mb-20">
+<picture>
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/AppleNews_logo-6723ca99408423d707bfe159c3d2c4692b391e1bd09983096683522103efc659.webp 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/AppleNews_logo_2x-1405eccbd45020e6f61af5fd414a45ebec82965014c32da40417118921d47745.webp 2x" type="image/webp">
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/AppleNews_logo-b646fbe007b65706dcb0dcefe8958cfbd0faeaa9a40a4a170f7a0b9e6c3e32f1.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/AppleNews_logo_2x-e6d47f009240ab46c0cd3f00aa753fa555c2c51e696ad3818b2d7d1cecdb9774.png 2x" type="image/png">
+<img alt="Apple News Logo" width="131" height="21" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/AppleNews_logo-b646fbe007b65706dcb0dcefe8958cfbd0faeaa9a40a4a170f7a0b9e6c3e32f1.png">
+</picture>
+</li>
+<li class="mb-20">
+<picture>
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/HuffPostHero_logo-aca266ad8dca877f5ddbe522fa8022f8ff3766c6046bbb2652c5d3b9d0004ed6.webp 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/HuffPostHero_logo_2x-e2fc9862a2e4175c65d8ff180f6e956921aa8bd48fe4219cb85cd97812f219a3.webp 2x" type="image/webp">
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/HuffPostHero_logo-6d380be004c2f80dc811354f9071532bd7428e29ebeea2745d1a72873bc70ae1.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/HuffPostHero_logo_2x-b0274a31dd09b50b94f38d6565c29095a58ad8a0fccf92540193f5101f3899d6.png 2x" type="image/png">
+<img alt="Huff Post Hero Logo" width="133" height="16" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/HuffPostHero_logo-6d380be004c2f80dc811354f9071532bd7428e29ebeea2745d1a72873bc70ae1.png">
+</picture>
+</li>
+<li>
+<picture>
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/Hackernoon_logo-e44f2afcfcbd19261357f9d3c0fd6077d17e5d9c7456fb802e027491195dd3f8.webp 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/Hackernoon_logo_2x-e9967c1a6b46e5886d0ce173751b8ff47d764924054b0ccb055f8503a8b11854.webp 2x" type="image/webp">
+<source srcset="https://d3smn0u2zr7yfv.cloudfront.net/assets/Hackernoon_logo-5972388bef7407d50d2b092614decbd169d0c4b7b3655a88e461b7458c871845.png 1x, https://d3smn0u2zr7yfv.cloudfront.net/assets/Hackernoon_logo_2x-9ec52cbd09f959cb3742e4023d0368e2d1b368aa3cb2bce2594c74bb76d5cd64.png 2x" type="image/png">
+<img alt="Hackernoon Logo" width="176" height="15" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/Hackernoon_logo-5972388bef7407d50d2b092614decbd169d0c4b7b3655a88e461b7458c871845.png">
+</picture>
+</li>
+</ul>
+</div>
+<div class="col-6 col-md-3 col-lg-4">
+<div class="row">
+<div class="col-12 col-lg-6">
+<ul class="footer__list mb-md-20">
+<li class="footer__list-item">
+<a class="footer__list-item-link footer__list-item-link--large" href="https://rubygarage.org/case-studies">Case Studies</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link footer__list-item-link--large" href="https://rubygarage.org/blog">Blog</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link footer__list-item-link--large" href="https://rubygarage.org/contacts">Contacts</a>
+</li>
+</ul>
+<p class="footer__title">Top Rated in</p>
+<a class="clutch mb-40 mb-md-20" rel="nofollow" href="https://clutch.co/profile/rubygarage"><img alt="clutch" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/clutch-a8e2fed528246e4ca8a213041f70898b53b347c6b84c84730dc7218d22341797.svg">
+<span class="clutch__hover">
+<img alt="clutch" loading="lazy" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/clutch_hover-5269f9d0f8ed9ea86f8ea8961f6e532e5d85612c7b892ce5a136c25a32304ada.svg">
+</span>
+</a></div>
+<div class="col-12 col-lg-6">
+<p class="footer__title">Services</p>
+<ul class="footer__list mb-20">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/product-ideation-services">Product Discovery</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/web-design-company">Design</a>
+</li>
+</ul>
+<ul class="footer__list mb-20">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/web-development">Web Development</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/mobile-app-development">Mobile Development</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/software-testing">Software Testing</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/code-review-services">Source Code Audit</a>
+</li>
+</ul>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/enterprise-software-development">For Enterprise</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/startup-product-development">For Startups</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="row">
+<div class="col-md-6">
+<p class="footer__title">Industries</p>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/expertise/retail-software-development">Retail</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/expertise/fintech-software-development">Fintech</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/expertise/educational-software-development">Education</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/expertise/healthcare-software-development">Healthcare</a>
+</li>
+</ul>
+<p class="footer__title">Company</p>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/company/about">About</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/company/workflow">Workflow</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/company/software-engineering">Engineering</a>
+</li>
+</ul>
+</div>
+<div class="col-md-6">
+<p class="footer__title">Locations</p>
+<ul class="footer__list">
+<li class="footer__list-item-text">
+Boston
+</li>
+<li class="footer__list-item-text">
+Chicago
+</li>
+<li class="footer__list-item-text">
+Houston
+</li>
+<li class="footer__list-item-text">
+Manchester
+</li>
+<li class="footer__list-item-text">
+New York
+</li>
+<li class="footer__list-item-text">
+San Francisco
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="row pb-20">
+<div class="col-12 col-md-10 offset-md-1">
+<div class="divider"></div>
+<div class="footer__bottom">
+<p class="footer__copyright">2014-2021 © Copyright RubyGarage. All Rights Reserved</p>
+<ul>
+<li class="footer__bottom-item">
+<a class="footer__bottom-item-link" href="https://rubygarage.org/assets">Assets</a>
+</li>
+<li class="footer__bottom-item">
+<a class="footer__bottom-item-link" href="https://rubygarage.org/privacy-policy">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<span itemscope="" itemtype="https://schema.org/Organization">
+<meta content="info@rubygarage.org" itemprop="email">
+<meta content="recruiting@rubygarage.org" itemprop="email">
+<meta content="+1 (929) 999-19-70" itemprop="telephone">
+<meta content="+44 (208) 068-49-88" itemprop="telephone">
+<meta content="+380 (99) 396-06-49" itemprop="telephone">
+<link href="https://clutch.co/profile/rubygarage" itemprop="sameAs">
+<link href="https://github.com/rubygarage" itemprop="sameAs">
+<link href="https://twitter.com/rubygarage" itemprop="sameAs">
+<link href="https://www.facebook.com/RubyGarage" itemprop="sameAs">
+<link href="https://www.linkedin.com/company/rubygarage" itemprop="sameAs">
+<link href="https://dribbble.com/ugem" itemprop="sameAs">
+<link href="https://www.behance.net/ugemdesign" itemprop="sameAs">
+</span>
+</footer>
+
+</div>
+<div class="blog-subscribe modal fade blog-subscribe-js" id="blog-subscribe" role="dialog" tabindex="-1">
+<button aria-label="close" class="blog-subscribe__close-btn blog-subscribe__close-btn-js" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="icon icon-cross"></span>
+</button>
+<div class="modal-dialog" role="document">
+<div class="container">
+<div class="row">
+<div class="col-10 offset-1 col-md-12 offset-md-0">
+<div class="blog-subscribe__logo-wrapper">
+<img class="blog-subscribe__logo" alt="RubyGarage" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/subscr_modal_logo-e7069ed0970011dd39ae82f9c189410531aed4ce8c5d5f965059ced8b6240b1e.svg">
+</div>
+<p class="blog-subscribe__heading blog-subscribe__heading-js">
+<span class="font-700">Subscribe</span>
+via email and know it all first!
+</p>
+<div class="text-center hidden success-js">
+<p class="blog-subscribe__heading">
+<span class="font-700">Thanks</span>
+for your subscription!
+</p>
+<span class="icon icon-check in-blue-220 font-20"></span>
+</div>
+</div>
+<div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+<form class="blog-subscr__form" id="new_subscriber" autocomplete="off" action="https://rubygarage.org/subscribe" accept-charset="UTF-8" data-remote="true" method="post" novalidate="novalidate"><input type="hidden" name="authenticity_token" value="GwcqB3QQT7PPC2kzei4Os8ciev1FIYKg1bHBWEb0Q8QlEEAZGaTqOEsv4dkMB0LqJIcNN8Ram25uKmX/BEG/qA==" id="subscriber_input">
+<div class="blog-subscr__form-content">
+<div class="main-input blog-subscr__form-content-input">
+<div class="main-input__field-box">
+<input class="main-input__field main-input__field--grey" required="required" autocomplete="email" type="email" name="subscriber[email]" id="subscriber_email">
+<label class="main-input__label">
+Your Email*
+</label>
+</div>
+<div class="main-input__hint" id="email-hint-js"></div>
+</div>
+<div class="blog-subscribe__form-content-checkbox">
+<div class="blog-subscribe__form-check-wrap">
+<label class="main-checkbox">
+<input name="subscriber[subscription][technical_articles]" type="hidden" value="0"><input class="main-checkbox__input blog-subscribe__form-check-js" type="checkbox" value="1" checked="checked" name="subscriber[subscription][technical_articles]" id="subscriber_subscription_technical_articles">
+<span class="main-checkbox__icon icon icon-check"></span>
+<span class="main-checkbox__label">Technical articles</span>
+</label>
+</div>
+<div class="blog-subscribe__form-check-wrap">
+<label class="main-checkbox">
+<input name="subscriber[subscription][business_articles]" type="hidden" value="0"><input class="main-checkbox__input blog-subscribe__form-check-js" type="checkbox" value="1" checked="checked" name="subscriber[subscription][business_articles]" id="subscriber_subscription_business_articles">
+<span class="main-checkbox__icon icon icon-check"></span>
+<span class="main-checkbox__label">Business articles</span>
+</label>
+</div>
+<div class="main-input__hint hidden static" id="options-hint-js">
+Please select at least one option
+</div>
+</div>
+<div class="text-center">
+<button name="button" type="submit" id="submit-btn-js" class="main-button main-button--violet-black move-icon-on-hover">Subscribe
+<span class="icon icon-touch ml-23"></span>
+</button></div>
+</div>
+</form></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="blog-search-modal modal fade" id="blog_search_modal" role="dialog" tabindex="-1">
+<button aria-label="close" class="blog-search-modal__close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="icon icon-cross"></span>
+</button>
+<div class="modal-dialog" role="document">
+<div class="container">
+<form action="https://rubygarage.org/blog" class="blog-search-form" method="get">
+<div class="main-input blog-search-form__input-wrap" id="main_input_js">
+<div class="main-input__field-box">
+<input type="text" name="search" id="main-input__field-js" class="blog-search-form__input main-input__field main-input__field--grey" maxlength="255" placeholder="Search for...">
+<div class="main-input__label"></div>
+<i class="icon icon-cross in-grey-300 blog-search-form__clear-btn hidden" id="clear_btn_js"></i>
+</div>
+<div class="main-input__hint blog-search-form__hint" id="main_input_hint_js">
+Please fill in the search field
+</div>
+</div>
+<button class="main-button main-button--violet-black min-210 mx-auto d-block" id="main_button_js">
+Search
+</button>
+</form>
+</div>
+</div>
+</div>
+
+
+<link rel="stylesheet" media="all" href="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/application-e4d26fde.css">
+<script>
+  var __gtm = {
+    enabled: 'true',
+    gtm_id: 'GTM-WK9RHZ'
+  }
+  
+  var __ga = {
+    enabled: 'true'
+  }
+  
+  var __sentry = {
+    enabled: 'true',
+    options: {
+      dsn: 'https://e2c5469930324830adec9e00c71a0cd6@sentry.rubygarage.org/4',
+      environment: 'production'
+    }
+  }
+  
+  var __lazyScripts = {
+    contact: 'https://d3smn0u2zr7yfv.cloudfront.net/packs/js/js/libs/contact_form-20a52956b4155821ddfc.js',
+    sliders: 'https://d3smn0u2zr7yfv.cloudfront.net/packs/js/js/libs/slider-daba13e85648f8d7327a.js',
+    workflow: 'https://d3smn0u2zr7yfv.cloudfront.net/packs/js/js/libs/workflow-f07cd4828479d015ba6d.js',
+    comments: 'https://d3smn0u2zr7yfv.cloudfront.net/packs/js/js/libs/comments-1324d7175c332bb71a8f.js',
+    fast_contact: 'https://d3smn0u2zr7yfv.cloudfront.net/packs/js/js/libs/fast_contact-0f9ac865aaadc62c87b3.js'
+  };
+</script>
+
+<script src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/show-e5cdbf3b4d456260b00d.js.download"></script>
+<script>
+  setTimeout(function(){
+    var s = document.createElement( 'script' );
+    s.setAttribute( 'src', "https://d3smn0u2zr7yfv.cloudfront.net/assets/main-044aa9104d1014a38c80b86347086dabac8b6c659facf1f124d1f93198d22e42.js" );
+    document.body.appendChild( s );
+  }, 5000)
+</script>
+
+<script>
+  var loadDeferredStyles=function(){ var addStylesNode=document.getElementById('deferred-styles');var replacement=document.createElement('div');if (addStylesNode) { replacement.innerHTML=addStylesNode.textContent;document.body.appendChild(replacement);addStylesNode.parentElement.removeChild(addStylesNode) } };var raf=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;if(raf)raf(function(){ window.setTimeout(loadDeferredStyles,0) });else window.addEventListener('load',loadDeferredStyles)
+</script>
+<script>
+  _linkedin_partner_id = '995377';
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script>
+  (function(){ var s = document.getElementsByTagName('script')[0];
+  var b = document.createElement('script');
+  b.type = 'text/javascript';b.async = true;
+  b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+  s.parentNode.insertBefore(b, s); })();
+</script>
+<noscript>
+<img alt='' height='1' src='https://dc.ads.linkedin.com/collect/?pid=995377&amp;fmt=gif' style='display:none;' width='1'>
+</noscript>
+
+
+<script src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/main-044aa9104d1014a38c80b86347086dabac8b6c659facf1f124d1f93198d22e42.js.download"></script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","328927571074126");fbq("set","agent","tmgoogletagmanager","328927571074126");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=328927571074126&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="">var _protocol="https:"==document.location.protocol?" https://":" http://",_site_hash_code="4c4f656ce8d6df2453b07adcf0eac5bb",_suid=4797;</script>
+<script type="text/javascript" id="" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/main.js.download"></script><script type="text/javascript" id="">(function(a){var h="https://nimblebird.co/anywhere/",k="c3928a930cad43b68af26ae960d70cca23f2f1362f9145d0a7629034d71b654a",l=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments)}},b=encodeURIComponent,f="SCRIPT",c=document,g=c.getElementsByTagName(f)[0],e="t\x3d"+b(c.title||"")+"\x26u\x3d"+b(c.location.href||"")+"\x26r\x3d"+b(c.referrer||""),m="text/javascript";window.Autopilot||(window.Autopilot=l);a.app&&(e="devmode\x3dtrue\x26"+e);var n=function(a,b){var d=c.createElement(f);
+d.src=a;d.type=m;d.async=b;g.parentNode.insertBefore(d,g)};a=function(){n(h+k+"?"+e,!0)};window.attachEvent?window.attachEvent("onload",a):window.addEventListener("load",a,!1)})({});</script>
+<script type="text/javascript" id="">(function(a){function b(a){a=Math.floor(a);return 10>a?"0"+a:a}a.scrollEvent=function(d){var c=a(document),b=a(window),f=c.height();b=b.height();current_value=(c=b+c.scrollTop())?Math.floor(100*c/f):0;return d>current_value?d:current_value};a.fixTime=function(){var a=new Date;return Math.floor(a.getTime()/1E3)};a.timeFormat=function(a){var c=a;a=c/3600%24;var d=c/60%60;c%=60;return b(a)+":"+b(d)+":"+b(c)}})(jQuery);
+function getTimeInterval(a){if(0<=a&&30>a)return"from 0 sec to 30 sec";if(30<=a&&60>a)return"from 30 sec to 1 min";if(60<=a&&120>a)return"from 1 min to 2 min";if(120<=a&&180>a)return"from 2 min to 3 min";if(180<=a&&300>a)return"from 3 min to 5 min";if(300<=a&&480>a)return"from 5 min to 8 min";if(480<=a)return"more 8 min"}
+function getScrollingInterval(a){if(0<=a&&20>a)return"from 0% to 20%";if(20<=a&&40>a)return"from 20% to 40%";if(40<=a&&60>a)return"from 40% to 60%";if(60<=a&&80>a)return"from 60% to 80%";if(80<=a&&100>=a)return"from 80% to 100%"}
+jQuery(document).ready(function(){var a=jQuery.fixTime(),b=0;jQuery(window).scroll(function(){b=jQuery.scrollEvent(b)});jQuery(window).bind("beforeunload",function(){current_max_string=b.toString()+"%";var d=jQuery.fixTime(),c=jQuery.timeFormat(d-a),e=getScrollingInterval(b);d=getTimeInterval(d-a);dataLayer.push({event:"Scroll to",percent_of_scrolling:current_max_string,time_on_page:c,percent_of_scrolling_interval:e,time_on_page_interval:d})})});</script><script type="text/javascript" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/main2.js.download"></script>
+
+<div>
+<link rel="stylesheet" media="all" href="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/technology_icons-14391ed4.css">
+</div><iframe role="complementary" scrolling="no" id="LeadboosterContainer" title="Chatbot" class="proactiveChat" style="height:200px !important" src="./How to Build a B2B Ecommerce Website_ A Step-by-Step Guide _ RubyGarage Blog_files/saved_resource.html"></iframe></body></html>

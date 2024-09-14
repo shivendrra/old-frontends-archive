@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        background-color: grey;
+        margin-left: 0px;
+        background: url(pattern.jpg);
+     }
+h2 {
+        text-align: left;
+        background-color: rgb(236, 128, 128);
+        padding: 0.5cm; 
+        color: whitesmoke;                   
+        border-radius: 10px;
+        font-family: "cooper";
+        margin-top: 0cm;
+   }
+form {
+        text-align: left;
+        padding: 30px;
+        margin-left: 9cm;
+        margin-right: 18cm;
+        border-radius: 10px;
+        border: solid lightgrey;
+        background-color: lightgrey;
+     }
+p {
+        text-align: right;
+        color: rgb(223, 62, 62);
+  }
+h1 {
+        font-family: 'Consolas';
+        color: black;
+   }
+   
+    
+    </style>
+    <title>Photoshot login</title>
+   
+   <!--  <link rel="stylesheet" type=" text/css" href="teaching.css">-->   
+</head>
+<body class="b1">
+    
+    <h2>PHOTOSHOT</h2>
+    
+    <form action="file:///C:/Users/Vedprakash/Desktop/harsh/html/photoshot.html" method="POST">
+        <h1>Create a new account</h1>
+        <br>
+        <input type="text" name="First name" id="name" placeholder="firstname" required>
+        <input type="text" name="Last name" id="last" placeholder="lastname" required>
+        <br>
+        <label for="gh">Male:</label>
+        <input type="radio" name="Male" id="gh" value="Male">
+        
+        <label for="hj">Female:</label>
+        <input type="radio" name="Male" id="hj" value="Female">
+     
+        <label for="ot">Other:</label>
+        <input type="radio" name="Male" id="ot" value="Other">
+        <br>
+        <input type="email" name="email" id="em" value="email" placeholder="example@gmail.com" required>
+        <br>
+        <input type="password" name="password" requiredtitle="5 to 10 digits" pattern=".{5,10}">
+        <br>
+        <label for="nm">Birthday:</label>
+        <select name="Month">
+     	    <option>JAN</option>
+     	    <option>FEB</option>
+     	    <option>MAR</option>
+     	    <option>APR</option>
+     	    <option>MAY</option>
+            <option>JUN</option>
+            <option>JUl</option>
+            <option>AUG</option>
+            <option>SEP</option>
+            <option>OCT</option>
+            <option>NOV</option>
+            <option>DEC</option>         
+        </select>
+        <select name="Day">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+            <option>7</option><option>8</option><option>9</option>
+            <option>10</option><option>11</option><option>12</option>
+            <option>13</option><option>14</option><option>15</option>
+            <option>16</option><option>17</option><option>18</option>
+            <option>19</option><option>20</option><option>21</option>
+            <option>22</option><option>23</option><option>24</option>
+            <option>25</option><option>26</option><option>27</option>
+            <option>28</option><option>29</option><option>30</option>
+            <option>31</option>
+        </select>
+        <select name="Year">
+     	    <option>2005</option>
+     	    <option>2006</option>
+     	    <option>2007</option>
+     	    <option>2008</option>
+     	    <option>2009</option>
+     	    <option>2010</option>
+        </select>
+        <br>
+        <label for="th">I agree to term and conditions</label>
+        <input type="checkbox" id="th">
+        <br>
+        <p>
+            <button types="button">Login</button>
+        </p>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+body  {
+    margin: 0.5cm;
+}
+.a1  {
+    text-decoration: none;
+}
+#header   {
+    text-align: center;
+    font-family: 'Cooper';
+    font-size: 1cm;
+}
+h2  {
+    border-left: 5px solid lightgreen;
+}
+.a2:link   {
+    text-decoration: underline;
+    color: rgb(57, 59, 59);
+}
+.a2:hover  {
+    text-decoration: blue underline;
+    color: blue;
+}

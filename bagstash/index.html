@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bagstash.com</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    
+    <!-- css -->    
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <!-- javascript -->
+    <script src="index.js"></script>
+
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+    <!-- google font library-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <nav id="mainNavbar" class="navbar navbar-dark bg-white navbar-expand-lg fixed-top py-0">
+            <a href="#" class="navbar-brand">Bagstash.com</a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navlinks">
+            <span id="toggler"><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navlinks">
+            <ul class="navbar navbar-nav ml-auto">
+              <li class="nav-items px-4">
+                <a href="product.html" class="nav-link" id="nav">Sell</a>
+              </li>
+              <li class="nav-items dropdown px-4">
+                <a class="nav-link dropdown-toggle" href="#" id="nav" role="button" data-toggle="dropdown" aria-haspopup="true" title="Products" aria-expanded="false">
+                   Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="showcase.html">Machinery</a>
+                  <a class="dropdown-item" href="#">Consumer Electronics</a>
+                  <a class="dropdown-item" href="showcase.html">Apperal, Fashion</a>
+                  <a class="dropdown-item" href="showcase.html">Home & Garden</a>
+                </div>
+              </li>
+              <li class="nav-items dropdown px-4">
+                <a class="nav-link dropdown-toggle" href="#" id="nav" role="button" data-toggle="dropdown" aria-haspopup="true" title="Products" aria-expanded="false">
+                  Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="showcase.html">All Templates</a>
+                  <a class="dropdown-item" href="#">UI kits</a>
+                  <a class="dropdown-item" href="showcase.html">Free Templates</a>
+                  <a class="dropdown-item" href="showcase.html">Premium Templates</a>
+                </div>
+              </li>
+              <li class="nav-items px-4">
+                <button class="btn-outline" onclick="login_page">Log in</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+ 
+      <!-- main content -->
+      <div id="main">
+        <div class="row">
+          <div class="col-md-7 col-xl-6 offset-lg-1 text-md-left">
+            <div id="head">
+                <div id="he1">
+                  <h3 id="heading1">Bagstash.com</h3><br>
+                  <h2 id="heading2"><B>Search products and find verified sellers nearby you.</B></h2><br>
+                  <input name="q" id="q" class="form-control form-control-search" placeholder="eg. material kit" itemprop="query-input">
+                  <button type="submit" name="button" class="btn btn-white btn-round btn-submit"></button>
+                </div>
+                <div id="he2">
+                  <span>
+                    <pre class="keyword">Keywords: <a id="key-link" href="#">Industries,</a> <a id="key-link" href="#">Medical,</a> <br>          <a id="key-link" href="#">Pharmaceutical,</a> <a id="key-link" href="#">Food,</a> <br>          <a id="key-link" href="#">Agriculture</a></pre>
+                  </span>
+                </div>
+            </div>
+          </div>
+          <div class="col-5 hidden-md-up text-center">
+            <div class="d-none d-lg-block">
+              <img src="cover1.png" alt="" height="500" width="500">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- top navbar -->
+    <div class="topnav notranslate text-center" id="topnav">
+      <div>
+        <span class="topnav-item">
+          <a class="bs-bar-item bs-button px-5" href="#"> Electrical Appliances</a>
+        </span>
+        <span class="topnav-item">
+          <a class="bs-bar-item bs-button px-5" href="#"> Medical & Pharma</a>
+        </span>
+        <span class="topnav-item">
+          <a class="bs-bar-item bs-button px-5" href="#"> Food & Agriculture</a>
+        </span>
+        <span class="topnav-item">
+          <a class="bs-bar-item bs-button px-5" href="#"> Clothing & Apperal</a>
+        </span>
+        <span class="topnav-item">
+          <a class="bs-bar-item bs-button px-5" href="#"> Others & Misc.</a>
+        </span>
+      </div>
+    </div>
+
+    <br><br><hr style="width: 100px; background-color: #02acad; height: 10px;">
+
+    <!-- shop display -->
+    <div class="shop-display container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h5 class="dis-main-para">Categories</h5>
+          <h2 class="dis-main-head">Variety of <b style="color: #02acad;">Products</b></h2>
+        </div>
+        <div class="col-lg-4">
+          <div class="dis-main card mb-2" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="electronics.png" class="dis-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="dis-head card-title"><a href="productpage.html" class="stretched-link">Electronics & Appliances</a></h5>
+                  <p class="dis-para card-text">Mobiles Accessories, IT & Accessories,
+                    COVID Essentials, Appliances, Smartphones</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dis-main card mb-2" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="clothes.png" class="dis-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="dis-head card-title"><a href="productpage.html/.electrical" class="stretched-link">Clothing & Apperal</a></h5>
+                  <p class="dis-para card-text">Men, Women, Kid's Garments
+                    Ethnic, Stylish, Latest fashion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="dis-main card mb-2" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="clothes.png" class="dis-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="dis-head card-title"><a href="productpage.html/.electrical" class="stretched-link">Medical & Pharma</a></h5>
+                  <p class="dis-para card-text">Medicines, OTC/FMCG,
+                    Generics, Ethicals, Medical Devices</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dis-main card mb-2" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="electronics.png" class="dis-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="dis-head card-title"><a href="productpage.html/.electrical" class="stretched-link">Electrical</a></h5>
+                  <p class="dis-para card-text">Switch & Switch Accessories, Lights & Light Accessories,
+                    Wires, Electrical Accessories</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="dis-main card mb-2" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="electronics.png" class="dis-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="dis-head card-title"><a href="productpage.html/.electrical" class="stretched-link">Food & Agriculture</a></h5>
+                  <p class="dis-para card-text">Staples, FMCG,
+                    Fruits & Vegetables, Meat, Fertilizers, Farming Tools, Seeds</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dis-main card mb-2" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="clothes.png" class="dis-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="dis-head card-title"><a href="productpage.html/.electrical" class="stretched-link">Toys & Sports</a></h5>
+                  <p class="dis-para card-text">Cycles, Toys and Baby Gear,
+                    Baby Gear, Sports & Fitness Gear, Cycles, Toys</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br><br><hr style="width: 100px; background-color: #02acad; height: 10px;">
+    <!-- Trade features -->
+    <div class="trd-main-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="dis-main-head">Trading in <b style="color: #02acad;">3</b> simple <b style="color: #02acad;">steps</b></h2>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="card trd-main">
+              <img src="step1.png" class="mx-auto card-img-top rounded-circle img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title trd-head">Create an account</h5>
+                <p class="card-text trd-para">Register using your mobile number. Enter your Name, Shop name and Pincode.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="card trd-main">
+              <img src="step2.png" class="mx-auto card-img-top rounded-circle img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title trd-head">Complete shop KYC</h5>
+                <p class="card-text trd-para">Upload any one of shop's KYC documents like GSTIN, Shop & Establishment Licence</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="card trd-main">
+              <img src="step3.png" class="mx-auto card-img-top rounded-circle img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title trd-head">Start ordering</h5>
+                <p class="card-text trd-para">Browse and order products for your shop from top sellers & brands</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br><br>
+
+    <!-- Secondary Features -->
+    <div class="container">
+      <div class="row features-inner text-center">
+        <div class="col-lg-12">
+          <h3 class="info-heading">------ More for you ------</h3>
+        </div>
+        <div class="sec-trd-col col-lg-3 col-md-6 col-sm-6">
+          <div class="single-features">
+            <i class="fas fa-user-check info-logo"></i>
+            <h6 class="info-head">Connect with verified sellers</h6>
+            <p class="info-para">Tell us your requirement & let our experts find verified sellers for you</p>
+            <button class="btn btn-outline-primary badge-pill">Get Sellers</button>
+          </div>
+        </div>
+        <div class="sec-trd-col col-lg-3 col-md-6 col-sm-6">
+          <div class="single-features">
+            <i class="fab fa-paypal info-logo"></i>
+            <h6 class="info-head">Pay with secure methods</h6>
+            <p class="info-para">Protect your payments for FREE. Pay sellers online via multiple options</p>
+            <button class="btn btn-outline-primary badge-pill">Know More</button>
+          </div>
+        </div>
+        <div class="sec-trd-col col-lg-3 col-md-6 col-sm-6">
+          <div class="single-features">
+            <i class="fas fa-store info-logo"></i>
+            <h6 class="info-head">Sell on BagStash very easily</h6>
+            <p class="info-para">Reach out new buyers for your product, with easy membership plans</p>
+            <button class="btn btn-outline-primary badge-pill">See plans</button>
+          </div>
+        </div>
+        <div class="sec-trd-col col-lg-3 col-md-6 col-sm-6">
+          <div class="single-features">
+            <i class="far fa-credit-card info-logo"></i>
+            <h6 class="info-head">Secure Payment</h6>
+            <p class="info-para">We use secure methods of payment like UPI, NFT, Online Transcation</p>
+            <button class="btn btn-outline-primary badge-pill">Buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Email info -->
+    <div class="container quote-entry">
+      <div class="row">
+        <div class="col-lg-4 col-md-4" id="connect-buyers">
+          <div class="p-15">
+            <h2>Get <b style="color: #02acad;">free</b> quotes from multiple sellers</h2>
+            <ul>
+              <li>
+                <i class="fas fa-paper-plane"></i>
+                <p>
+                  Tell us what <br>
+                  <b style="color: #02acad;">you need</b>
+                </p>
+              </li>
+              <li>
+                <i class="fas fa-envelope-open-text"></i>
+                <p>
+                  Get quotes<br>
+                  from <b style="color: #02acad;">sellers</b>
+                </p>
+              </li>
+              <li>
+                <i class="fas fa-handshake"></i>
+                <p>
+                  Seal the <br>
+                  <b style="color: #02acad;">deal</b>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-7 col-md-8" id="quote-form">
+          <h4><b>Tell us your requirement</b></h4><br>
+          <form action="#">
+            <div class="row">
+              <div class="form-group col-lg-5">
+                <input type="text" class="form-control" id="product" placeholder="Enter Product name" name="product">
+              </div>
+              <div class="form-group col-lg-5">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+              </div>
+              <div class="form-group col-lg-5">
+                <input type="text" class="form-control" id="name" placeholder="Your Name" name="Customer">
+              </div>
+              <div class="form-group col-lg-5">
+                <input type="tel" class="form-control"  id="phone" placeholder="Enter phone number" name="phone">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- footer -->
+    <footer>
+      <div class="foot-head">
+        <div class="foot-word">
+          <div class="foot-social">
+            Follow us on: 
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="foot-heading">We are there to help you!</div>
+        </div>
+      </div>
+      <div class="foot-word foot-lower">
+        <div>
+          <ul class="foot-wdth">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Join Sales</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Advertise with Us</a></li>
+            <li><a href="#">Investor Selection</a></li>
+          </ul>
+          <ul class="foot-wdth">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Jobs & Careers</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+
+
+
+
+    <!-- javascript with jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

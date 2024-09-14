@@ -1,0 +1,169 @@
+body {
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Shippori Antique', sans-serif;    
+}
+
+/* for navbar */
+#mainNavbar {
+        box-shadow: 0 5px 10px grey;
+}
+
+#mainNavbar #nav {
+	color: #131212;
+    font-weight: 300;
+}
+
+#mainNavbar .navbar-brand {
+	color: #131212;
+	font-size: 40px;
+    font-family: 'Festive', cursive;
+}
+
+/* for buttons and links */
+li .btn-outline {
+    outline: none;
+    display: block;
+    cursor: pointer;
+    border: solid 2px #02c3bd;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.3s linear;
+    background-color: #02c3bd;
+    box-shadow: 0 5px 10px #555555;
+}
+
+li .btn-outline :hover, .btn-outline :focus {
+    background-color: #04c0ba;
+    color: white;
+}
+
+li .btn-outline :active {
+    background-color: #02acad;
+    color: #fff;
+}
+
+#key-link {
+    text-decoration: none;
+    color: #838282;
+}
+
+#key-link:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #555555;
+    color: #555555;
+}
+
+.container {
+    max-width: 90%;
+}
+
+
+/* about */
+.dis-main-para {
+    color: rgb(170, 165, 165);
+    font-weight: bold;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+.main-head {
+    border-left: 5px solid #02acad;
+    padding-left: 20px;
+    font-size: 50px;
+} 
+
+.pro {
+    color: #02acad;
+    font-weight: bold;
+}
+
+.about {
+    background-color: white;
+}
+
+/* review */
+.star-re i {
+    color: rgb(255, 187, 0);
+}
+
+#write-btn {
+    box-shadow: 0 5px 10px rgb(170, 165, 165);
+}
+
+.main-re .card {
+    border: none;
+}
+
+pre {
+    font-size: 15px;
+    color: #838282;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+.share {
+    color: grey;
+    font-size: 15px;
+}
+
+.report {
+    font-size: 15px;
+    color: grey;
+}
+
+/* for footer */
+footer {
+    background: #f6f6f6;
+    border-top: solid 1px #e6e6e6;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: arial
+}
+
+.foot-head {
+    background: #eeeeee;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #e6e6e6;
+    line-height: 42px;
+    font-weight: 400;
+}
+
+.foot-word {
+    width: 1001px;
+    margin: 0 auto;
+}
+
+.foot-social {
+    float: right;
+}
+
+.foot-lower li {
+    list-style: none;
+}
+
+ul.footwdth {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.foot-lower li.foot-wdth {
+    margin: 7px 0;
+    width: 190px;
+    float: left;
+    list-style: none;
+    line-height: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

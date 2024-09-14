@@ -1,0 +1,114 @@
+body {
+	background-color: rgb(242, 245, 248);
+	text-align: center;
+	font-family: 'Handlee', cursive;
+}
+
+nav {
+	background-color: black;
+}
+
+#mainNavbar #nav {
+	color: rgb(255, 255, 255);
+	font-family: 'Handlee', cursive;
+}
+
+#mainNavbar #navl {
+	color: white;
+}
+
+#hr1 {
+	width: 400px;
+}
+
+#mainNavbar #nav :hover {
+	color: white;
+}
+
+#heading2 {
+	font-family: 'Handlee', cursive;
+	color: #FFC312;
+}
+
+#mainNavbar .navbar-brand {
+	color: rgb(255, 255, 255);
+	font-size: 30px;
+	font-family: 'Hanalei', cursive;
+}
+
+#a1 {
+	text-decoration: white;
+	color: white;
+}
+
+#a1 :hover {
+	text-decoration: underline;
+	color: rgb(92, 92, 184);
+}
+
+footer {
+	background-color: rgb(0, 0, 0);
+	padding-top: 1cm;
+	padding-bottom: 0.5cm;
+	float: center;
+}
+
+#he2 {
+	color: white;
+	font-family: 'Handlee', cursive;
+}
+
+#btna {
+	text-decoration: none;
+	color: white;
+}
+
+#below {
+	text-decoration: none;
+	color: rgb(109, 104, 104);
+}
+
+#p2 {
+	color: white;
+}
+
+#contact {
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: white;
+	text-align: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+}
+
+#foothe {
+	color: white;
+}
+
+li {
+	text-decoration: none;
+}
+
+#a1 {
+	text-decoration: none;
+	color: white;
+}
+
+#mess1 {
+	color: rgba(81, 81, 219, 0.918);
+	font-size: 1cm;
+}
+
+#map1 {
+	color: rgba(81, 81, 219, 0.918);
+	font-size: 1cm;
+}
+
+#cont {
+	font-size: 1cm;
+}
+
+#free1 {
+	font-size: 1cm;
+}

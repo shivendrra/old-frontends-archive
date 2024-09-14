@@ -1,0 +1,19 @@
+#mainNavbar {
+    background-color: rgb(128, 240, 128) !important;
+}
+
+#mainNavbar .nav-link {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+
+#mainNavbar .navbar-brand {
+    color: white;
+    font-size: 40px;
+    font-family: 'Hanalei', cursive;
+}
+
+#mainNavbar .nav-link:hover {
+    border-bottom: 2px solid rgb(68, 179, 216);
+}

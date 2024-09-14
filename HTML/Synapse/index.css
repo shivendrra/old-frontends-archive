@@ -1,0 +1,104 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=Ubuntu:wght@300&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=RocknRoll+One&display=swap');
+
+/* main style tags */
+
+body {
+    background-color: rgb(233, 225, 225);
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+.navbar {
+    background-color: rgb(13, 13, 34);
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-size: 30px;
+}
+
+.navbar .navbar-brand :hover{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    border: none;
+}
+
+#search {
+    background-color: rgb(13, 13, 34);
+    padding-bottom: 2px;
+}
+
+.navbar #nav {
+    color: white;
+}
+
+.navbar-nav .nav-items {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+    }
+
+a :hover {
+    text-decoration: none;
+}
+
+.dropdown-item {
+    color: rgb(78, 79, 80);
+}
+
+input :hover {
+    text-decoration: none;
+}
+
+input ::selection {
+    text-decoration: none;
+}
+
+#side1 {
+    padding-top: 150px;
+}
+
+#section2 {
+    background-color: rgb(221, 216, 216);
+}
+
+#warning1 {
+    font-size: 30px;
+    color: rgb(78, 79, 80);
+}
+
+#part1 {
+    padding-top: 60px;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-text {
+    color: rgb(78, 79, 80);
+}

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Bagstash.com</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        
+    <!-- css -->    
+    <link rel="stylesheet" type="text/css" href="sellerinfo.css">
+
+    <!-- javascript -->
+    <script src="index.js"></script>
+
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+    <!-- google font library-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="header">
+		<nav id="mainNavbar" class="navbar navbar-dark bg-white navbar-expand-lg fixed-top py-0">
+			<a href="index.html" class="navbar-brand">Bagstash.com</a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#navlinks">
+				<span id="toggler"><i class="fas fa-bars"></i></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navlinks">
+				<ul class="navbar navbar-nav ml-auto">
+					<li class="nav-items px-4">
+						<a href="product.html" class="nav-link" id="nav">Sell</a>
+					</li>
+					<li class="nav-items active dropdown px-4">
+						<a class="nav-link" href="" id="nav" role="button" data-toggle="dropdown" aria-haspopup="true" title="Products" aria-expanded="false">
+							Products
+						</a>
+					</li>
+					<li class="nav-items px-4">
+						<button class="btn-outline" onclick="login_page">Log in</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+    <br><br><br><br><br>
+    
+    <!-- about -->
+    <div class="container">
+      <span class="about">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h5 class="dis-main-para">About</h5><hr style="width: 300px; height: 10px;">
+          </div>
+          <div class="col-lg-12">
+            <div class="main-head">
+              <h3 class="heading"><b>Realtek Technology</b></h3></div>
+          </div><br><br>
+          <div class="col-lg-12">
+            <div class="main-para">
+              <p class="para">Realtek Semiconductor Corp. is a fabless semiconductor company situated in the Hsinchu Science Park, Hsinchu, Taiwan. Realtek was founded in October 1987 and subsequently listed on the Taiwan Stock Exchange in 1998. Realtek currently manufactures and sells a variety of microchips globally and its product lines broadly fall into three categories: communications network ICs, computer peripheral ICs, and multimedia ICs. As of 2019, Realtek employs 5,000 people, of whom 78% work in research and development.</p>
+            </div>
+          </div>
+          <div class="col-lg-12"><br>
+            <h5 class="products"><b class="pro">Pro</b><b>ducts</b></h5>
+            <ul>
+              <li>Electrical Appliances</li>
+              <li>Electronics</li>
+              <li>Devices</li>
+              <li>Cables</li>
+            </ul>
+          </div>
+        </div>
+      </span>
+      <br><br>
+      <span>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h5 class="dis-main-para">Reviews</h5><hr style="width: 300px; height: 10px;">
+          </div>
+          <div class="col-lg-12">
+            <br>
+            <div class="row">
+              <div class="col-lg-3">
+                <h4 class="re-head">Customer Ratings</h4>
+                <span>
+                  <p class="star-re"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>  4.2/5.0<br>
+                    <b class="total-re text-muted">5,793 Reviews</b>
+                  </p>
+                  <div class="progress" style="max-width: 150px; max-height: 10px;">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress" style="max-width: 150px; max-height: 10px;">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 90%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress" style="max-width: 150px; max-height: 10px;">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 35%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress" style="max-width: 150px; max-height: 10px;">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress" style="max-width: 150px; max-height: 10px;">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </span>
+                <hr>
+                <span>
+                  <h5 class="write-re">Write A Review</h5>
+                  <p class="share">Share your thoughts</p>
+                  <button id="write-btn" class="btn btn-outline-dark">Write a review</button>
+                </span>
+              </div>
+              <div class="col-lg-7">
+                <span class="main-re">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Harsh Singh</h5>
+                      <p class="star-re"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>  4.2/5.0<br></p>
+                      <pre class="card-text">
+Good display and built quality
+Amazing for daily surfing on web
+Only issue i had till now is the omen command centre does not open fast
+Leaving that the laptops worth the money
+                      </pre>
+                      <button class="btn btn-outline-info btn-sm">Helpful</button>
+                      <a class="report px-2" href="#" onclick="report">Report abuse</a>
+                    </div>
+                  </div>
+                </span>
+                <span class="main-re">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Harsh Singh</h5>
+                      <p class="star-re"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>  4.2/5.0<br></p>
+                      <pre class="card-text">
+Good display and built quality
+Amazing for daily surfing on web
+Only issue i had till now is the omen command centre does not open fast
+Leaving that the laptops worth the money
+                      </pre>
+                      <button class="btn btn-outline-info btn-sm">Helpful</button>
+                      <a class="report px-2" href="#" onclick="report">Report abuse</a>
+                    </div>
+                  </div>
+                </span>
+                <span class="main-re">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Harsh Singh</h5>
+                      <p class="star-re"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>  4.2/5.0<br></p>
+                      <pre class="card-text">
+Good display and built quality
+Amazing for daily surfing on web
+Only issue i had till now is the omen command centre does not open fast
+Leaving that the laptops worth the money
+                      </pre>
+                      <button class="btn btn-outline-info btn-sm">Helpful</button>
+                      <a class="report px-2" href="#" onclick="report">Report abuse</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="foot-head">
+        <div class="foot-word">
+          <div class="foot-social">
+            Follow us on: 
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="foot-heading">We are there to help you!</div>
+        </div>
+      </div>
+      <div class="foot-word foot-lower">
+        <div>
+          <ul class="foot-wdth">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Join Sales</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Advertise with Us</a></li>
+            <li><a href="#">Investor Selection</a></li>
+          </ul>
+          <ul class="foot-wdth">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Jobs & Careers</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+  <!-- javascript with jquery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>

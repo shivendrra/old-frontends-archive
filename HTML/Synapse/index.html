@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Synapse</title>
+<!-- all meta tags here -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+<!-- icon -->
+<link rel="icon" href="logo2.png">
+
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<!-- javascript -->
+<script src="index.js"></script>
+
+<!-- font awesome library -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="row">
+        <div id="section1" class=" col-lg-5 col-md-5 col-sm-12">
+            <nav id="mainNavbar" class="navbar navbar-light navbar-expand-sm py-2">
+                <a href="#" class="navbar-brand" title="Your Profile"><img class="rounded-circle" src="dp1.png" height="50" width="50"></a>
+                <span class="navbar-toggler" data-toggle="collapse" data-target="#navLinks">
+                    <span id="toggler"><i class="fas fa-bars"></i></span>
+                </span>
+                <div class="collapse navbar-collapse" id="navLinks">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-items">
+                            <a class="nav-link" id="nav" href="#" title="Video Chat"><i class="fas fa-video"></i></a>
+                        </li>
+                        <li class="nav-items px-3">
+                            <a class="nav-link" id="nav" href="#" title="Chat message"><i class="fas fa-comment-dots"></i></a>
+                        </li>
+                        <li class="nav-items dropdown">
+                            <a class="nav-link dropdown" href="#" id="nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="#">New Group</a>
+                              <a class="dropdown-item" href="#">Create a room</a>
+                              <a class="dropdown-item" href="#">Profile</a>
+                              <a class="dropdown-item" href="#">Archived</a>
+                              <a class="dropdown-item" href="#">Starred</a>
+                              <a class="dropdown-item" href="#">Settings</a>
+                              <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="search">
+                <form action="">
+                    <div class="p-2 bg-light rounded rounded-pill shadow-sm mb-2 ml-3 mr-3">
+                        <div class="input-group">
+                            <input id="search1" type="search" placeholder="Search any contact.." aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                            <div class="input-group-append">
+                                <button id="button-addon1" onclick="searchfunc" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card ">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Chats</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Story</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Calls</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card border-bottom-1 border-top-0 border-right-0 border-left-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center py-2">
+                            <img src="dp1.png" alt="" class=" text-center rounded-circle" height="80" width="80">
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Tejas</h5>
+                                <p class="card-text">Tap to start chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-bottom-1 border-top-0 border-right-0 border-left-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center py-2">
+                            <img src="dp1.png" alt="" class=" text-center rounded-circle" height="80" width="80">
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Uttam</h5>
+                                <p class="card-text">Tap to start chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-bottom-1 border-top-0 border-right-0 border-left-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center py-2">
+                            <img src="dp1.png" alt="" class=" text-center rounded-circle" height="80" width="80">
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Arpit</h5>
+                                <p class="card-text">Tap to start chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-bottom-1 border-top-0 border-right-0 border-left-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center py-2">
+                            <img src="dp2.png" alt="" class=" text-center rounded-circle" height="80" width="80">
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Preeti</h5>
+                                <p class="card-text">Tap to start chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-bottom-1 border-top-0 border-right-0 border-left-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center py-2">
+                            <img src="dp2.png" alt="" class=" text-center rounded-circle" height="80" width="80">
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Mansi</h5>
+                                <p class="card-text">Tap to start chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-bottom-1 border-top-0 border-right-0 border-left-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center py-2">
+                            <img src="dp1.png" alt="" class=" text-center rounded-circle" height="80" width="80">
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Golu</h5>
+                                <p class="card-text">Tap to start chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-bottom-1 border-top-0 border-right-0 border-left-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center py-2">
+                            <img src="dp2.png" alt="" class=" text-center rounded-circle" height="80" width="80">
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Sakshi</h5>
+                                <p class="card-text">Tap to start chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="side1" class="col-lg-7 col-md-7 text-center">
+        <span>
+            <img class="rounded-circle" src="pic1.jpg" alt="" height="200" width="200">
+            <br>
+            <h2 id="warning">Keep your phone connected</h2>
+            <pre id="info">Synapse needs to sync messages from your phone. To reduce
+data usage, connect phone to Wi-Fi.
+            </pre>
+        </span>
+    </div>
+</div>
+
+
+
+    <!-- javascript with jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

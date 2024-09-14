@@ -1,0 +1,86 @@
+header {
+	background: url(bag1.jpg);
+	background-position: center;
+	background-size: 1980px 1080px;
+	padding-bottom: 2.8cm; 
+}
+
+#he1 {
+	font-family: 'Hanalei', cursive;
+	color: white;
+	font-size: 2cm;
+	text-decoration-color: white;
+}
+
+p {
+	font-size: 0.80cm;
+	color: white;
+}
+
+.container {
+	padding-top: 15%;
+	text-align: center;
+}
+
+#h1 {
+	width: 450px;
+	color: white;
+	height: 3px;
+}
+
+#mainNavbar .navbar-brand {
+	color: white;
+	font-size: 1cm;
+	font-family: 'Handlee', cursive;
+}
+
+footer {
+	background-color: rgba(31, 29, 29, 0.918);
+	color: rgb(175, 160, 160);
+}
+
+#mainNavbar .nav-link {
+	color: white;
+	font-family: 'Handlee', cursive;
+}
+
+#mainNavbar .nav-link:hover {
+	color:  #FFC312;
+	border-bottom: 2px solid #FFC312;
+}
+
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* section {
+	border: 2px solid grey;
+	border-radius: 10px;
+	background-color: rgb(202, 194, 194);
+} */
+
+.lead {
+	color: black;
+	text-align: left;
+	font-size: 25px;
+}
+
+h6 {
+	text-align: center;
+}
+
+#article {
+	padding-bottom: 1cm;
+	padding-top: 1cm;
+}
+
+.he3 {
+	font-family: 'Handlee', cursive;
+	font-weight: bold;
+}
+
+.btn-xl {
+	border-radius: 10px;
+}

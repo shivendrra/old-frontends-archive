@@ -1,0 +1,128 @@
+body {
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* for navbar */
+    /* #mainNavbar {
+        box-shadow: 0 5px 10px grey;
+    } */
+
+#mainNavbar #nav {
+	color: #131212;
+    font-weight: 300;
+}
+
+#mainNavbar .navbar-brand {
+	color: #131212;
+	font-size: 40px;
+    font-family: 'Festive', cursive;
+}
+
+/* for topnav */
+.topnav {
+    position: relative;
+    top: 0px;
+    padding: 20px;
+    background-color: #585858;
+    box-shadow: 0 5px 10px rgb(138, 137, 137);
+}
+
+.bs-bar-item {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.topnav-item :hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(107, 105, 105);
+    border: 1px solid rgb(107, 105, 105);
+}
+
+i {
+    font-size: 20px;
+}
+
+/* for product display */
+.pro-link {
+    text-decoration: none;
+    color: purple;
+    font-size: 15px;
+}
+
+.pro-price {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pro-add {
+    font-size: 10px;
+}
+
+/* for buttons and links */
+li .btn-outline {
+    outline: none;
+    display: block;
+    cursor: pointer;
+    border: solid 2px #02c3bd;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.3s linear;
+    background-color: #02c3bd;
+    box-shadow: 0 5px 10px #555555;
+}
+
+li .btn-outline :hover, .btn-outline :focus {
+    background-color: #04c0ba;
+    color: white;
+}
+
+li .btn-outline :active {
+    background-color: #02acad;
+    color: #fff;
+}
+
+#key-link {
+    text-decoration: none;
+    color: #838282;
+}
+
+#key-link:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #555555;
+    color: #555555;
+}
+
+.container {
+    max-width: 90%;
+}
+
+/* product display */
+.dis-main-para {
+    color: rgb(170, 165, 165);
+    font-weight: bold;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+#block {
+    padding-bottom: 30px;
+}
+
+.ctg-head {
+    font-size: 35px;
+    color: black;
+    border-left: 5px solid #02acad;
+    border-radius: 2px;
+    padding-left: 10px;
+    font-family: 'Shippori Antique', sans-serif;
+}

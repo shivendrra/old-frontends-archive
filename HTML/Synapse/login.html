@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Synapse.com: Signup</title>
+    <!-- all meta tags here -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- logo -->
+    <link rel="icon" href="logo1.png">
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="login.css">
+
+    <!-- javascript -->
+    <script src="login.js"></script>
+
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+            <!-- Navbar Brand -->
+            <a href="#" class="navbar-brand"><i class="fas fa-comments"></i>  Synapse.com</a>
+        </div>
+    </nav>
+
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row py-5 px-5 align-items-center">
+        <div id="d1" class="border-right col-lg-5 col-md-5 col-sm-5 col-xs-5">
+            <div class="d-flex flex-column text-left">
+                <h1>Synapse.com</h1>
+                <h3>Create your account and chat with your family,friends, relatives, & close ones.</h3>
+            </div>
+        </div>
+
+        <!-- Registeration Form -->
+        <div id="d2" class="col-lg-6 col-md-12 ml-auto">
+            <form action="profile.html" method="GET">
+                <div class="row">
+                    <!-- Email Address -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-envelope text-muted"></i>
+                            </span>
+                        </div>
+                        <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+                    
+                    <!-- Password -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+                        </div>
+                        <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+
+                    <!-- Terms&Condition -->
+                    <div class="form-group col-lg-12 mx-auto mb-0">
+                        <label for="terms">If you agree <a href="Terms&Conditions.docx">Terms&Condition</a>, click this </label>
+                        <input type="checkbox" name="terms" id="terms" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group text-center col-lg-12 mx-auto mb-0">
+                        <button id="sub" class="btn btn-primary-outline" type="submit">Create Your Account</button>
+                    </div>
+
+                    <!-- Divider Text -->
+                    <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                        <div class="border-bottom w-100 ml-5"></div>
+                        <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                        <div class="border-bottom w-100 mr-5"></div>
+                    </div>
+
+                    <!-- Already Registered -->
+                    <div class="text-center w-100">
+                        <p class="text-muted font-weight-bold">Already Registered? <a href="#" class="text-primary ml-2">Login</a></p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- javascript with jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

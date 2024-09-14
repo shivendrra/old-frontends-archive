@@ -1,0 +1,36 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=Ubuntu:wght@300&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=RocknRoll+One&display=swap');
+
+/* main style tags */
+body {
+    background: white;
+}
+
+h2 {
+    font-size: 45px;
+    color: rgb(13, 13, 34);
+    font-family: 'Original Surfer', cursive;
+}
+
+#d2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 3px rgb(13, 13, 34) solid;
+    border-radius: 2cm;
+}
+
+#form {
+    padding-top: 10px;
+    padding-left: 40px;
+    float: left;
+}
+
+form {
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+label {
+    color: greenyellow;
+}
+
